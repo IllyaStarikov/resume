@@ -1,0 +1,188 @@
+% Packages
+\usepackage{fontspec} % For loading fonts
+\usepackage{xunicode,xltxtra,url,parskip,enumitem,marvosym,graphicx,titlesec,hyperref,fontawesome}
+\usepackage{setspace,siunitx,multicol,textcomp,array,amsmath,bm,adjustbox,nicefrac,censor,geometry}
+\usepackage[normalem]{ulem}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[absolute]{textpos}
+\usepackage{lmodern}
+\usepackage{ifthen}
+
+% Booleans
+\newboolean{ntk}
+
+\newboolean{displaycv}
+\newboolean{displaycontact}
+\newboolean{displaycolor}
+\newboolean{displaycensored}
+
+% Fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+    Path =          src/,
+    SmallCapsFont = Fontin-SmallCaps.otf,
+    BoldFont =      Fontin-Bold.otf,
+    ItalicFont =    Fontin-Italic.otf
+]{Fontin-Regular.otf}
+
+% Commands
+
+\newcommand{\ntk}[1]{#1}
+
+\newcommand{\ntkT}[1]{%
+    \ifthenelse{\boolean{ntk}}{#1}{}%
+}
+
+\newcommand{\ntkF}[1]{%
+    \ifthenelse{\boolean{ntk}}{}{#1}%
+}
+
+\newcommand{\ntkTF}[2]{%
+    \ifthenelse{\boolean{ntk}}{#1}{#2}%
+}
+
+\newcommand{\censortt}[1]{%
+    \ifthenelse{\boolean{displaycensored}}{\censor{#1}}{#1}%
+}
+
+\newcommand{\dato}[1]{\texttt{\small{\textbf{#1}}}}
+\newcommand{\dafrom}[1]{\texttt{\small{#1}}}
+
+\newcommand{\dadurationymd}[3]{\textit{\small{$\bm{#1}$y $\bm{#2}$m $\bm{#3}$d}}}
+
+\newcommand{\dadurationym}[2]{\textit{\small{$\bm{#1}$y $\bm{#2}$m }}}
+\newcommand{\dadurationmd}[2]{\textit{\small{$\bm{#1}$m $\bm{#2}$d}}}
+
+\newcommand{\dadurationy}[1]{\textit{\small{$\bm{#1}$y}}}
+\newcommand{\dadurationm}[1]{\textit{\small{$\bm{#1}$m}}}
+\newcommand{\dadurationd}[1]{\textit{\small{$\bm{#1}$d}}}
+
+% Environments
+\newenvironment{ressection}{
+    \begin{tabular}{w{r}{1em}|p{18cm}}
+}{
+    \end{tabular}
+}
+
+
+% Set the margins to 5inches a piece
+\newgeometry{noheadfoot=true,top=.5in,bottom=.5in, left=.5in, right=.5in}
+
+% Link color should be mostly black, with a border around it
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks=false,allbordercolors={0 0 0},pdfborderstyle={/S/U/W 1}}
+
+% Make titles fit the page better
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+% Make bullet point pretty
+% Don't use solids as they are too bold and take up too much attention
+\setlist[itemize]{label=$\circ$, leftmargin=12pt, noitemsep, before={\vspace*{-.5\baselineskip}}, after={\vspace*{-\baselineskip}}}
+
+% Don't hyphenate anything
+\tolerance=1
+\emergencystretch=\maxdimen%
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Don't hyphenate anything, make the text start closer to the ceiling
+\textblockorigin{3mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+% Absolute text positioning
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\usepackage{moresize}
+
+
+% Flags, Logos
+%
+% ukraineflag
+% usaflag
+%
+% googlelogo
+% labslogo
+% garminlogo
+% missouristlogo
+% msatlogo
+% jeffcologo
+% movallogo
+% desotologo
+% sunriselogo
+
+\newcommand{\ukraineflag}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[height=10pt]{src/assets/ukraine.png}%
+        }{}}}
+
+\newcommand{\usaflag}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[height=10pt]{src/assets/usa.png}%
+        }{}}}
+
+
+\newcommand{\googlelogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[width=9pt]{src/assets/google-color.png}
+        }{%
+            \faGoogle
+        }}}
+
+\newcommand{\labslogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+        \ntkTF{%
+            \includegraphics[width=12pt]{src/assets/labs-color-full.png}
+        }{
+            \IfDarkModeTF{%
+                \includegraphics[width=10pt]{src/assets/labs-color-dark.png}
+            }{%
+                \includegraphics[width=10pt]{src/assets/labs-color.png}
+            }}
+        }{%
+            \faFlask
+        }}}
+
+\newcommand{\missouristlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[width=12pt]{src/assets/missouri-s-and-t-color.png}
+        }{
+            \IfDarkModeTF{%
+            \includegraphics[width=9pt]{src/assets/missouri-s-and-t-dark.png}
+        }{%
+            \includegraphics[width=9pt]{src/assets/missouri-s-and-t.png}
+        }}}}
+
+\newcommand{\msatlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+    \IfDarkModeTF{%
+    \includegraphics[width=18pt]{src/assets/msat-color-dark.png}
+    }{
+    \includegraphics[width=18pt]{src/assets/msat-color.png}
+    }
+    }{%
+    \IfDarkModeTF{%
+            \includegraphics[width=8pt]{src/assets/satellite-dark.png}
+        }{%
+            \includegraphics[width=8pt]{src/assets/satellite.png}
+    }}}}
+
+\newcommand{\garminlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[width=8pt]{src/assets/garmin-color.png}
+        }{%
+        \IfDarkModeTF{%
+            \includegraphics[width=8pt]{src/assets/garmin-dark.png}
+        }{%
+            \includegraphics[width=8pt]{src/assets/garmin.png}
+        }}}}
+
+\newcommand{\jeffcologo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[width=9pt]{src/assets/jefferson-college-color.png}
+        }{}}}
+
+\newcommand{\movallogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[width=8pt]{src/assets/missouri-valley-college-color.png}
+        }{}}}
+
+\newcommand{\desotologo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[width=15pt]{src/assets/de-soto-senior-high-color.png}
+        }{}}}
+
+\newcommand{\sunriselogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[width=11pt]{src/assets/sunrise-r9-color.png}
+        }{}}}
+
