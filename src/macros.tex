@@ -17,15 +17,11 @@
 \newboolean{displaycensored}
 
 % Fonts
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont[
-    Path =          src/,
-    SmallCapsFont = Fontin-SmallCaps.otf,
-    BoldFont =      Fontin-Bold.otf,
-    ItalicFont =    Fontin-Italic.otf
-]{Fontin-Regular.otf}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
 
-% Commands
+\newfontfamily\mytitlefont{Lovelo-LineBold.otf}[Path = src/fonts/]
 
 \newcommand{\ntk}[1]{#1}
 
@@ -59,7 +55,7 @@
 
 % Environments
 \newenvironment{ressection}{
-    \begin{tabular}{w{r}{1em}|p{18cm}}
+    \begin{tabular}{w{r}{1.5em}|p{17.5cm}}
 }{
     \end{tabular}
 }
@@ -70,10 +66,11 @@
 
 % Link color should be mostly black, with a border around it
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks=false,allbordercolors={0 0 0},pdfborderstyle={/S/U/W 1}}
+% \hypersetup{colorlinks=false,allbordercolors={0 0 0},pdfborderstyle={/S/U/W 1}}
+\hypersetup{colorlinks=false}
 
 % Make titles fit the page better
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\bfseries\itshape\raggedright\mytitlefont}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 
 % Make bullet point pretty

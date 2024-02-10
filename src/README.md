@@ -61,7 +61,7 @@ Assets with copyright implications (images, fonts, logos) is not included, for c
 
 However, here are sources you can get these:
 
-- [FontIn](https://www.exljbris.com/fontin.html)
+- [Lovelo](https://www.fontfabric.com/fonts/lovelo/)
 - [FontAwesome](https://fontawesome.com)
 - [Flags](https://www.countryflags.com/)
 

@@ -7,9 +7,9 @@ SHELL := /bin/bash
 all: \
 	images \
 	source_export \
+	ntk_export ntk_dark_export \
 	cv_export cv_dark_export \
 	resume_prod_export resume_prod_dark_export \
-	ntk_export ntk_dark_export \
 	resume_export resume_dark_export \
 	cv_prod_export cv_prod_dark_export \
 	resume_redacted_export resume_redacted_dark_export \
