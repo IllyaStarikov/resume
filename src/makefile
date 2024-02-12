@@ -13,7 +13,7 @@ all: \
 	resume_export resume_dark_export \
 	cv_prod_export cv_prod_dark_export \
 	resume_redacted_export resume_redacted_dark_export \
-	cv_redacted_export cv_redacted_dark_export \
+	cv_redacted_export cv_redacted_dark_export
 
 
 src_folder = template

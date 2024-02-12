@@ -23,6 +23,19 @@
 
 \newfontfamily\mytitlefont{Lovelo-LineBold.otf}[Path = src/fonts/]
 
+% Commands
+\newcommand{\displaycvTF}[2]{%
+    \ifthenelse{\boolean{displaycv}}{#1}{#2}%
+}
+
+\newcommand{\displaycvT}[1]{%
+    \ifthenelse{\boolean{displaycv}}{#1}{}%
+}
+
+\newcommand{\displaycvF}[1]{%
+    \ifthenelse{\boolean{displaycv}}{}{#1}%
+}
+
 \newcommand{\ntk}[1]{#1}
 
 \newcommand{\ntkT}[1]{%
@@ -70,7 +83,7 @@
 \hypersetup{colorlinks=false}
 
 % Make titles fit the page better
-\titleformat{\section}{\Large\bfseries\itshape\raggedright\mytitlefont}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\bfseries\itshape\raggedright\mytitlefont}{}{0pt}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 
 % Make bullet point pretty
