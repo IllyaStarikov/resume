@@ -1,18 +1,18 @@
-# Starriculum Vitae⭐🎓
+# [resume](https://resume.starikov.io)
 
-**_All the reasons why you should ~~or shouldn't~~ hire me._**
+**🎓 _All the reasons why you should ~~or shouldn't~~ hire me._**
 
 <p align="center"><img width=512 src="template/starriculum-vitae.png"></p>
 
 ---
 
 <p align="center">
-<b><a href="https://illyastarikov.github.io/resume/illya-starikov-resume.pdf">Résumé</a></b>
-     [<a href="https://illyastarikov.github.io/resume/illya-starikov-resume-dark.pdf">Dark</a>]<br>
-<b><a href="https://illyastarikov.github.io/resume/illya-starikov-cv.pdf">Curriculum Vitae</a></b>
-     [<a href="https://illyastarikov.github.io/resume/illya-starikov-cv-dark.pdf">Dark</a>]<br>
+<b><a href="https://resume.starikov.io/illya-starikov-resume.pdf">Résumé</a></b>
+     [<a href="https://resume.starikov.io/illya-starikov-resume-dark.pdf">Dark</a>]<br>
+<b><a href="https://resume.starikov.io/illya-starikov-cv.pdf">Curriculum Vitae</a></b>
+     [<a href="https://resume.starikov.io/illya-starikov-cv-dark.pdf">Dark</a>]<br>
 <b><a href="http://github.com/illyaStarikov/resume/">Source Code</a></b>
-     [<a href="https://illyastarikov.github.io/resume/">README</a>]<br>
+     [<a href="https://resume.starikov.io">README</a>]<br>
 </p>
 
 ---
