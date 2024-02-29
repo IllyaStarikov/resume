@@ -4,6 +4,19 @@
 
 <p align="center"><img width=512 src="template/starriculum-vitae.png"></p>
 
+---
+
+<p align="center">
+<b><a href="https://illyastarikov.github.io/resume/illya-starikov-resume.pdf">Résumé</a></b>
+     [<a href="https://illyastarikov.github.io/resume/illya-starikov-resume-dark.pdf">Dark</a>]<br>
+<b><a href="https://illyastarikov.github.io/resume/illya-starikov-cv.pdf">Curriculum Vitae</a></b>
+     [<a href="https://illyastarikov.github.io/resume/illya-starikov-cv-dark.pdf">Dark</a>]<br>
+<b><a href="http://github.com/illyaStarikov/resume/">Source Code</a></b>
+     [<a href="https://illyastarikov.github.io/resume/">README</a>]<br>
+</p>
+
+---
+
 The resume has two targets:
 
 - **Resume**, or "summary", gives the highest-level summary of experience
