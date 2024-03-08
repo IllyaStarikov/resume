@@ -1,5 +1,7 @@
 # [resume](https://resume.starikov.io)
 
+<script src="https://resume.starikov.io/template/analytics.js"></script>
+
 **🎓 _All the reasons why you should ~~or shouldn't~~ hire me._**
 
 <p align="center"><img width=512 src="template/starriculum-vitae.png"></p>
