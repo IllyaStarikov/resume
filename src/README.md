@@ -1,5 +1,7 @@
 # Source Code🛠️🎓
 
+<script src="https://resume.starikov.io/template/analytics.js"></script>
+
 **_Built by humans, for humans._**
 
 <p align="center"><img width=512 src="./../template/built-by-humans-for-humans.png"></p>
