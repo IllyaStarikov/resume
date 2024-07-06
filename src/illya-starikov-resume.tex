@@ -52,7 +52,7 @@
 % Title
 % -------------------------------------------------------------------------------------------------
 \par{\centering{\censortt{%
-    {\mytitlefont\HUGE Illya Starikov}
+    {\mytitlefont{\HUGE{Illya Starikov}}}
 }\bigskip\par}}%
 %
 %
@@ -66,7 +66,7 @@
 \ifthenelse{\boolean{displaycontact}}{%
 
 }{%
-    \faMailReplyAll & \censortt{
+    \faMailReplyAll{} & \censortt{%
         \href{mailto:illiStarikov@gmail.com}{\textbf{iLLiStarikov}@\textbf{gmail.com}}} \\
 }%
 
@@ -75,22 +75,24 @@
 \ifthenelse{\boolean{displaycontact}}{%
     
 }{%
-    \faPhone & \censortt{
-        $\bm{+1}$ (XXX) XXX - XXXX} \\
+    \faPhone{} & \censortt{%
+        $\bm{+1}$ (XXX) XXX — XXXX} \\
 }%
 
 
-%
-    \faGithub & \censortt{
-        \href{https://github.com/IllyaStarikov}{%
-          github.com/\textbf{IllyaStarikov}}} \\
+\faLink{} & \censortt{%
+    \href{https://starikov.co}{\textbf{Starikov.co}}} \\
+% \faLink & \href{http://go/starikov}{go/starikov} \\
 
+\faGithub{} & \censortt{%
+    \href{https://github.com/IllyaStarikov}{%
+      github.com/\textbf{IllyaStarikov}}} \\
 
 \displaycvT{%
     \ifthenelse{\boolean{displaycontact}}{%
     
     }{%
-        \faMapPin & \censortt{
+        \faMapPin{} & \censortt{%
             San Francisco Bay Area} \\
     }%
 }%
@@ -100,17 +102,17 @@
 % Summary
 % -------------------------------------------------------------------------------------------------
     % Start date: May 2017
-    \centerline{
+    \centerline{%
     \censortt{\textbf{ill$\cdot$ya star$\cdot$y$\cdot$kov}} $\vert$
         \censortt{He/Him} $\vert$
         \begin{adjustbox}{raise=-2.1pt}
-            \ukraineflag\hspace{1pt}\usaflag
+            \ukraineflag{}\hspace{1pt}\usaflag{}
         \end{adjustbox}
     }
     %
     \vspace{-0.10em}
     %
-    \centerline{\footnotesize{
+    \centerline{\footnotesize{%
         $\int _{2017}expertise\left(%
         \,\text{Data Science, Cloud, System Design}\,%
     \right)\,dt = 7^{\tiny{+}}$ YoE%
@@ -128,12 +130,12 @@
 
 \displaycvTF{%
     \vspace{-1em}
-}{
+}{%
     \vspace{-2.25em}
 }
 
 
-\section{Experience}
+\section{Vocation}
 % -------------------------------------------------------------------------------------------------
 \begin{ressection}
 % Google, Project Starline
@@ -147,16 +149,27 @@
             }}
     \\
     %
-    \googlelogo
+    \googlelogo{}
         & \censortt{\textbf{Google} Project Starline
     %
     }%
     %
-    
-        %
-        % & \begin{itemize}
-        %     \item Me works here
-        % \end{itemize}
+     \\
+        & \begin{itemize}
+            \item Designed the end-to-end factory software architecture,
+                \textbf{\href{https://www.hp.com/us-en/newsroom/blogs/2024/hp-partners-with-google-to-bring-project-starline-into-workplace.html}{adopted by Google and HP}}
+        \setlength{\itemindent}{.25in}
+            \item Aligning 25+ cross-functional engineering managers, ICs,  security council, and program management
+        \setlength{\itemindent}{0in}
+
+            \item Implemented the standard factory interface for Starline OS, responsible for interfacing, testing, and calibrating
+        \setlength{\itemindent}{.25in}
+            
+            \item Integrated three subsystems into said interface, including one audio functional test
+            \item Formulated Diagnostics framework, responsible for system health checking as a factory final-assembly test
+        \setlength{\itemindent}{0in}
+        \end{itemize}
+
 % -------------------------------------------------------------------------------------------------
 \end{ressection}
 
@@ -168,7 +181,7 @@
         \textit{Devices \& Services Product Area (DSPA) }}
     \\
 
-    \dafrom{12/2019} & \censortt{
+    \dafrom{12/2019} & \censortt{%
         \textbf{Google} Central Test Engineering
         %
         }%
@@ -177,7 +190,26 @@
 
     
 
-    \googlelogo & \begin{itemize}
+    \googlelogo{} & \begin{itemize}
+        \item Factory audio software DRI for \textbf{\censortt{%
+            \href{https://store.google.com/us/product/nest_cam_battery}{Nest Cam},
+            \href{https://store.google.com/intl/en/ideas/articles/new-pixel-tablet}{Pixel Tablet},
+            \href{https://store.google.com/us/product/pixel_buds_pro}{Pixel Buds Pro}}}
+
+        \displaycvT{%
+        \setlength{\itemindent}{.25in}
+                
+            \item \textbf{Saved $\bm{\$120\text{k}}$ in program capex} by optimizing
+                \censortt{Nest Cam} ($\bm{52\%}$) and
+                \censortt{Pixel Tablet} ($\bm{23\%}$) test time
+
+                \item \censortt{Nest Cam's} test script was
+                    \textbf{fastest within \censortt{Google} audio} (by $\bm{36\%}$) during entire tenure
+
+                \item \censortt{Nest Cam} was \censortt{Nest's} first fully-remote program, from PROTO to MP
+        \setlength{\itemindent}{0in}
+        }
+
         \item Architected an ML system to make \censortt{Nest} and \censortt{Pixel}
             factory data more insightful and actionable
         \setlength{\itemindent}{.25in}
@@ -196,36 +228,17 @@
             \href{https://docs.opencv.org/3.4/d1/d89/tutorial_py_orb.html}{OpenCV ORB},
             producing color depth-maps and interactive 3D reconstructions
 
-        \item Founded or co-founded efforts to scale software within entire organization:
-            
-            documentation overhaul (internal \textbf{$\bm{350}$ new users/month, $\bm{750}$ new sessions/month}),
-            boost software testing (\textbf{hundreds of new test cases}),
-            test station adoption org-common or team-common libraries (\textbf{code reduction up to $\bm{70\%}$})
-
         \displaycvT{%
+            \item Founded or co-founded efforts to scale software within entire organization:
+                
+                documentation overhaul (internal \textbf{$\bm{350}$ new users/month, $\bm{750}$ new sessions/month}),
+                boost software testing (\textbf{hundreds of new test cases}),
+                test station adoption org-common or team-common libraries (\textbf{code reduction up to $\bm{70\%}$})
+
             \item Implemented initial factory data downloader (adopted by org, external teams),
                 common audio test framework (entire team),
                 and lead forums for knowledge sharing (team participation)
         }
-
-        \item Factory audio software DRI for \censortt{%
-            \href{https://store.google.com/us/product/nest_cam_battery}{Nest Cam},
-            \href{https://store.google.com/intl/en/ideas/articles/new-pixel-tablet}{Pixel Tablet},
-            \href{https://store.google.com/us/product/pixel_buds_pro}{Pixel Buds Pro}}
-
-        \setlength{\itemindent}{.25in}
-                
-            \item \textbf{Saved $\bm{\$120\text{k}}$ in program capex} by optimizing
-                \censortt{Nest Cam} ($\bm{52\%}$) and
-                \censortt{Pixel Tablet} ($\bm{23\%}$) test time
-
-            \displaycvT{%
-                \item \censortt{Nest Cam's} test script was
-                    \textbf{fastest within \censortt{Google} audio} (by $\bm{36\%}$) during entire tenure
-
-                \item \censortt{Nest Cam} was \censortt{Nest's} first fully-remote program, from PROTO to MP
-            }
-        \setlength{\itemindent}{0in}
 
     \end{itemize}
 % -------------------------------------------------------------------------------------------------
@@ -254,7 +267,7 @@
 
     
 
-    \garminlogo
+    \garminlogo{}
     & \begin{itemize}
         \item \textbf{Lead system testing effort} to meet DO-178B compliance on
             \censortt{\href{https://www.garmin.com/en-US/p/664160}{GDL-60}}
@@ -293,7 +306,7 @@
 
     
 
-    \garminlogo
+    \garminlogo{}
     & \begin{itemize}
         % Hive
         \item Implemented quality-of-life improvements for a highly-utilized aviation tool
@@ -311,7 +324,7 @@
         \textbf{Software Engineering Intern} \censortt{\textit{Automotive OEM}}
     \\
 
-    \dafrom{5/2017} & \censortt{
+    \dafrom{5/2017} & \censortt{%
         \textbf{Garmin}
         %
         }%
@@ -320,7 +333,7 @@
 
     
 
-    \garminlogo
+    \garminlogo{}
     & \begin{itemize}
         \item Brought-up and maintained automation suite to assess the performance of navigation routing
 
@@ -342,7 +355,7 @@
         \textbf{Team Lead \& DRI} \censortt{\textit{Aerospace}}
     \\
 
-    \dafrom{4/2016} & \censortt{
+    \dafrom{4/2016} & \censortt{%
         \href{https://sites.google.com/umsystem.edu/msat/projects/mr-mrs-sat}{%
             \textbf{Missouri S\&T Satellite Team}}
         Stereoscopic Imaging
@@ -356,7 +369,7 @@
 
     
 
-    \msatlogo
+    \msatlogo{}
     & \begin{itemize}
         \item \textbf{Lead $\bm{6}$ person team} of
             undergraduate and graduate students to deliver nanosatellite payload:
@@ -381,7 +394,7 @@
         \textbf{Undergraduate Teaching Assistant} \censortt{\textit{Computer Science}}
     \\
 
-    \dafrom{8/2016} & \censortt{
+    \dafrom{8/2016} & \censortt{%
         \textbf{Missouri University of Science and Technology}
         %
         }%
@@ -390,7 +403,7 @@
 
     
 
-    \missouristlogo
+    \missouristlogo{}
     & \begin{itemize}
         \item Taught programming concepts to freshman/sophomore-level students across $3\times$ classes:
             Introduction To Programming (Class+Lab),
@@ -409,15 +422,15 @@
         \textbf{Assistant} \censortt{\textit{Employment Services}}
     \\
 
-    \dafrom{9/2014} & \censortt{
+    \dafrom{9/2014} & \censortt{%
         \textbf{Jefferson College}
         \href{https://www.google.com/maps/search/Jefferson College, 1000 Viking Dr, Hillsboro, MO 63050}{%
             \textit{Hillsboro, MO}}}
     \\
     %
 
-    \jeffcologo &
-    \textit{Rehired} \texttt{5/2015-8/2015}, \texttt{5/2016-8/2016} \\
+    \jeffcologo{} &
+    \textit{Rehired} \texttt{5/2015--8/2015}, \texttt{5/2016--8/2016} \\
 
     
 
@@ -440,7 +453,7 @@
 
     \dafrom{5/2014} &
         \textbf{Freelance}
-        \censortt{
+        \censortt{%
             \href{https://www.google.com/maps/search/De Soto, MO}{\textit{De Soto, MO}}
         }
         %
@@ -465,45 +478,46 @@
 % experience list
 % -------------------------------------------------------------------------------------------------
 \displaycvT{% BEGIN displaycv
-    \googlelogo &
-        \textit{Software Engineer} \censortt{Project Starline \textbf{Google}} \texttt{9/2023-present} \\
-    \googlelogo &
-        \textit{Software Engineer} \censortt{Central Test Engineering \textbf{Google}} \texttt{12/2019-9/2023} \\
+    \googlelogo{} &
+        \textit{Software Engineer} \censortt{Project Starline \textbf{Google}} \texttt{9/2023--present} \\
+    \googlelogo{} &
+        \textit{Software Engineer} \censortt{Central Test Engineering \textbf{Google}} \texttt{12/2019--9/2023} \\
 
     
 
-    \garminlogo &
-        \textit{Software Engineer} \censortt{Safety \& Datalink \textbf{Garmin}} \texttt{8/2017-6/2018} \\
-    \garminlogo &
-        \textit{Software Engineering Intern} \censortt{Interfaces/Data Routing \textbf{Garmin}} \texttt{8/2017-6/2018} \\
-    \garminlogo &
-        \textit{Software Engineering Intern} \censortt{Automotive OEM \textbf{Garmin}} \texttt{5/2017-8/2017} \\
+    \garminlogo{} &
+        \textit{Software Engineer} \censortt{Safety \& Datalink \textbf{Garmin}} \texttt{8/2017--6/2018} \\
+    \garminlogo{} &
+        \textit{Software Engineering Intern} \censortt{Interfaces/Data Routing \textbf{Garmin}} \texttt{8/2017--6/2018} \\
+    \garminlogo{} &
+        \textit{Software Engineering Intern} \censortt{Automotive OEM \textbf{Garmin}} \texttt{5/2017--8/2017} \\
 
 } % END displaycv
 
 \displaycvT{%
-     \missouristlogo &
-        \textit{Bachelor of Science} \censortt{Computer Science \textbf{Missouri S\&T}} \texttt{1/2015-12/2018} \\
+    \missouristlogo{} &
+        \textit{Bachelor of Science} \censortt{Computer Science \textbf{Missouri S\&T}} \texttt{1/2015--12/2018} \\
 } %
 
-\msatlogo &
-    \textit{Team Lead \& DRI} \censortt{\textbf{Missouri S\&T Satellite Team}} \texttt{4/2016-12/2017} \\
-\missouristlogo &
-    \textit{Undergraduate Teaching Assistant} \censortt{Computer Science \textbf{Missouri S\&T}} \texttt{8/2016-4/2017}
+\msatlogo{} &
+    \textit{Team Lead \& DRI} \censortt{\textbf{Missouri S\&T Satellite Team}} \texttt{4/2016--12/2017} \\
+\missouristlogo{} &
+    \textit{Undergraduate Teaching Assistant} \censortt{Computer Science \textbf{Missouri S\&T}} \texttt{8/2016--4/2017}
 %
 %
 \displaycvT{%
     \\
-    \missouristlogo &
-        \textit{Computer Lab Assistant} \censortt{\textbf{Missouri S\&T}} \texttt{1/2016-4/2017} \\
+    \missouristlogo{} &
+        \textit{Computer Lab Assistant} \censortt{\textbf{Missouri S\&T}} \texttt{1/2016--4/2017} \\
 
-    \jeffcologo &
-        \textit{Employment Services Assistant} \censortt{\textbf{Jefferson College}} \texttt{9/2014-12/2014}, \texttt{5/2015-8/2015}, \texttt{5/2016-8/2016} \\
+    \jeffcologo{} &
+        \textit{Employment Services Assistant} \censortt{\textbf{Jefferson College}}
+            \texttt{9/2014--12/2014}, \texttt{5/2015--8/2015}, \texttt{5/2016--8/2016} \\
 
-    & \textit{Web Developer} \textbf{Freelance} \texttt{5/2014-8/2014} \\
+    & \textit{Web Developer} \textbf{Freelance} \texttt{5/2014--8/2014} \\
 
-    \movallogo &
-        \textit{Computer Lab Assistant} \censortt{\textbf{Missouri Valley College}} \texttt{9/2013-5/2014}
+    \movallogo{} &
+        \textit{Computer Lab Assistant} \censortt{\textbf{Missouri Valley College}} \texttt{9/2013--5/2014}
     %
 } %
 % -------------------------------------------------------------------------------------------------
@@ -511,7 +525,7 @@
 
 \vspace{0.25em}
 
-\section{Technical}
+\section{Attributes}
 % -------------------------------------------------------------------------------------------------
 \begin{ressection}
 % Technology
@@ -556,10 +570,11 @@
         \href{https://github.com/tmux/tmux/wiki}{tmux},
         \href{https://github.com/tmuxinator/tmuxinator}{Tmuxinator},
         \href{https://www.vim.org/}{Vim},
+        \href{https://developer.apple.com/documentation/}{Xcode \& iOS toolchain},
         \href{https://ohmyz.sh/}{ZSH}
     \\
 
-    \displaycvT{
+    \displaycvT{%
         & \textbf{Markup}
           \href{https://en.wikipedia.org/wiki/CSS}{CSS},
           \href{https://en.wikipedia.org/wiki/HTML}{HTML},
@@ -613,7 +628,7 @@
         %
         \dafrom{stats} &
         %
-    }{
+    }{%
         %
         \dafrom{misc} &
         %
@@ -657,7 +672,7 @@
     %
     %
     %
-    $\bm{7\times}$ \censortt{Google Peer} Bonus,
+    $\bm{8\times}$ \censortt{Google Peer} Bonus,
     %
     %
     %
@@ -712,7 +727,7 @@
     \dato{12/2018} &
         \textbf{Bachelor of Science} \textit{Computer Science}
     \\
-    \displaycvTF{\dafrom{1/2015}}{\missouristlogo} & \censortt{
+    \displaycvTF{\dafrom{1/2015}}{\missouristlogo} & \censortt{%
             \href{https://www.mst.edu}{\textbf{Missouri University of Science and Technology}}
             %
             \href{https://www.google.com/maps/search/Missouri University of Science and Technology, Parker Hall, 106, 300 W 13th St, Rolla, MO 65409}{%
@@ -721,12 +736,12 @@
     \\
     %
     \displaycvT{% BEGIN displaycv
-        \missouristlogo
+        \missouristlogo{}
 
         & \textbf{GPA} $\bm{3.83}/4.0$; Major GPA $\bm{3.88}/4.0$;
             \textbf{Summa Cum Laude} \\
 
-        & \textbf{Advisers} \censortt{
+        & \textbf{Advisers} \censortt{%
             Dr. Jennifer Leopold,
             \href{https://web.mst.edu/~ricardom/}{Dr. A. Ricardo Morales},
             Dr. Simone Silvestri,
@@ -737,7 +752,7 @@
         & \textbf{Associations}
         Academy of Computing Machinary (\textbf{ACM}) [\texttt{2/2016-5/2018}],
         \censortt{Missouri S\&T Satellite Team (\textbf{MSAT})} [\texttt{12/2017-5/2018}],
-        Institute of Electrical and Electronics Engineers (\textbf{IEEE}), [\texttt{1/2016-5/2017}] \\
+        Institute of Electrical and Electronics Engineers (\textbf{IEEE}), [\texttt{1/2016--5/2017}] \\
     } % END displaycv
 
     
@@ -758,17 +773,17 @@
     \dato{5/2013} &
         High School \textit{diploma}
     \\
-    \dafrom{8/2009} & \censortt{
+    \dafrom{8/2009} & \censortt{%
         \textbf{De Soto Senior High}
         %
         \href{https://www.google.com/maps/search/De Soto Senior High School, 815 Amvets Dr, De Soto, MO 63020}{\textit{De Soto, MO}}}
         %
     \\
 
-    \desotologo
+    \desotologo{}
     & 
     \textbf{Associations}
-        Cross-Country \censortt{
+        Cross-Country \censortt{%
             (Class $\bm{3}$,
             $\bm{2\times}$ All-District individual [\href{https://www.athletic.net/CrossCountry/Results/Meet.aspx?Meet=43791\&show=all}{%
                 \texttt{2011}}\texttt{-}\href{https://www.athletic.net/CrossCountry/Division/List.aspx?DivID=12615}{\texttt{2012}}],
@@ -792,12 +807,12 @@
         \textit{De Soto, MO}}}
         %
     \\
-    \sunriselogo
+    \sunriselogo{}
     & \textbf{Associations}
         Cross-Country, Basketball, Computer Club, Quiz Bowl, Chess Club, Yearbook Design \\
     & \textbf{Awards}
         \href{https://health.gov/our-work/nutrition-physical-activity/presidents-council/programs-awards/presidential-youth-fitness-program}{%
-            Presidential Fitness Award} [x8, 2001-2009],
+            Presidential Fitness Award} [x8, 2001--2009],
         School Speech Contest Winner
 % -------------------------------------------------------------------------------------------------
 \end{ressection}
