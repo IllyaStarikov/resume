@@ -1,6 +1,7 @@
 % Packages
 \usepackage{fontspec} % For loading fonts
-\usepackage{xunicode,xltxtra,url,parskip,enumitem,marvosym,graphicx,titlesec,fontawesome}
+\usepackage{xunicode,xltxtra,url,parskip,enumitem,marvosym,graphicx,titlesec}
+\usepackage{fontawesome5}
 \usepackage{setspace,siunitx,multicol,textcomp,array,amsmath,bm,adjustbox,nicefrac,censor,geometry}
 \usepackage[normalem]{ulem}
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -107,11 +108,21 @@
 \usepackage{moresize}
 
 
-% Flags, Logos
+% Flags
 %
 % ukraineflag
 % usaflag
-%
+
+\newcommand{\ukraineflag}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[height=10pt]{src/assets/countries/ukraine.png}%
+        }{}}}
+
+\newcommand{\usaflag}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \includegraphics[height=10pt]{src/assets/countries/usa.png}%
+        }{}}}
+
+
+% Experience
 % googlelogo
 % labslogo
 % garminlogo
@@ -121,15 +132,6 @@
 % movallogo
 % desotologo
 % sunriselogo
-
-\newcommand{\ukraineflag}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
-            \includegraphics[height=10pt]{src/assets/ukraine.png}%
-        }{}}}
-
-\newcommand{\usaflag}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
-            \includegraphics[height=10pt]{src/assets/usa.png}%
-        }{}}}
-
 
 \newcommand{\googlelogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
             \includegraphics[width=9pt]{src/assets/google-color.png}
@@ -196,4 +198,189 @@
 \newcommand{\sunriselogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
             \includegraphics[width=11pt]{src/assets/sunrise-r9-color.png}
         }{}}}
+
+
+% Tooling
+\newcommand{\bashlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/bash-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/bash.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/bash-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/bash.png}
+            }
+        }}}
+
+\newcommand{\clogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/c-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/c.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/c-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/c.png}
+            }
+        }}}
+
+\newcommand{\cpplogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/cpp-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/cpp.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/cpp-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/cpp.png}
+            }
+        }}}
+
+\newcommand{\csharplogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/c-sharp-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/c-sharp.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/c-sharp-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/c-sharp.png}
+            }
+        }}}
+
+
+\newcommand{\gcplogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[height=9pt]{src/assets/tooling/gcp-white.png}
+            }{%
+                \includegraphics[height=9pt]{src/assets/tooling/gcp.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[height=9pt]{src/assets/tooling/gcp-white.png}
+            }{%
+                \includegraphics[height=9pt]{src/assets/tooling/gcp.png}
+            }
+        }}}
+
+\newcommand{\latexlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[height=9pt]{src/assets/tooling/latex-white.png}
+            }{%
+                \includegraphics[height=9pt]{src/assets/tooling/latex.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[height=9pt]{src/assets/tooling/latex-white.png}
+            }{%
+                \includegraphics[height=9pt]{src/assets/tooling/latex.png}
+            }
+        }}}
+
+\newcommand{\lualogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[height=9pt]{src/assets/tooling/lua-white.png}
+            }{%
+                \includegraphics[height=9pt]{src/assets/tooling/lua.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[height=9pt]{src/assets/tooling/lua-white.png}
+            }{%
+                \includegraphics[height=9pt]{src/assets/tooling/lua.png}
+            }
+        }}}
+
+\newcommand{\perllogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/perl-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/perl.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/perl-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/perl.png}
+            }
+        }}}
+
+\newcommand{\pythonlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/python-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/python.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/python-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/python.png}
+            }
+        }}}
+
+\newcommand{\scikitlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/scikit-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/scikit.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/scikit-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/scikit.png}
+            }
+        }}}
+
+\newcommand{\sqllogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/sql-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/sql.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/sql-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/sql.png}
+            }
+        }}}
+
+\newcommand{\swiftlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/swift-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/swift.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/swift-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/swift.png}
+            }
+        }}}
+
+\newcommand{\tensorflowlogo}{\censortt{\ifthenelse{\boolean{displaycolor}}{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/tensorflow-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/tensorflow.png}
+            }
+        }{%
+            \IfDarkModeTF{%
+                \includegraphics[width=9pt]{src/assets/tooling/tensorflow-white.png}
+            }{%
+                \includegraphics[width=9pt]{src/assets/tooling/tensorflow.png}
+            }
+        }}}
 
