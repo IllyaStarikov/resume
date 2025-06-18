@@ -6,6 +6,7 @@ SHELL := /bin/bash
 
 all: \
 	images \
+	white_tooling_icons \
 	source_export \
 	ntk_export ntk_dark_export \
 	cv_export cv_dark_export \
@@ -26,11 +27,23 @@ quality = 98
 images:
 	echo "Converting this folder $(src_folder) and outputting to $(dest_folder)..."
 	mkdir $(dest_folder) || true
+	mkdir $(dest_folder)/tooling || true
 	for s_file in "$(src_folder)"/*; do \
 		dest_path="$(dest_folder)/`basename $$s_file`" ; \
 		echo "- $$s_file -> $$dest_path" ; \
 		convert $$s_file -resize "$(dimension)"x -quality "$(quality)"% $$dest_path ; \
 		mogrify -strip $$dest_path ; \
+	done
+
+# Create white versions of tooling icons for dark mode
+white_tooling_icons:
+	echo "Creating white versions of tooling icons..."
+	mkdir -p $(dest_folder)/tooling || true
+	for icon in bash c c-sharp cpp gcp latex lua perl python scikit sql swift tensorflow; do \
+		if [ -f "$(dest_folder)/tooling/$$icon.png" ]; then \
+			echo "- Creating white version of $$icon.png"; \
+			convert "$(dest_folder)/tooling/$$icon.png" -fuzz 20% -fill white -opaque black "$(dest_folder)/tooling/$$icon-white.png"; \
+		fi; \
 	done
 
 
@@ -380,5 +393,4 @@ define helper_scrub_resume
 	python3 -c "$$scrub_resume_command" > src/working_temp.tex
 	mv src/working_temp.tex src/working.tex
 endef
-
 
