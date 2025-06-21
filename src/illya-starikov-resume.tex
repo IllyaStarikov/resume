@@ -63,6 +63,9 @@
 \begin{tabular}{w{r}{1.5em}l}
 % Contact
 % -------------------------------------------------------------------------------------------------
+\faHome{} & \censortt{%
+    \href{https://starikov.co}{\textbf{Starikov.co}}} \\
+
 \ifthenelse{\boolean{displaycontact}}{%
 
 }{%
@@ -80,22 +83,7 @@
 }%
 
 
-\faLink{} & \censortt{%
-    \href{https://starikov.co}{\textbf{Starikov.co}}} \\
-% \faLink & \href{http://go/starikov}{go/starikov} \\
-
-\faGithub{} & \censortt{%
-    \href{https://github.com/IllyaStarikov}{%
-      github.com/\textbf{IllyaStarikov}}} \\
-
-\displaycvT{%
-    \ifthenelse{\boolean{displaycontact}}{%
-    
-    }{%
-        \faMapPin{} & \censortt{%
-            San Francisco Bay Area} \\
-    }%
-}%
+  \faMapPin{}\; & \censortt{\textbf{San Francisco Bay Area}} \\
 % -------------------------------------------------------------------------------------------------
 \end{tabular}
 
@@ -103,69 +91,62 @@
 % -------------------------------------------------------------------------------------------------
     % Start date: May 2017
     \centerline{%
-    \censortt{\textbf{ill$\cdot$ya star$\cdot$y$\cdot$kov}} $\vert$
-        \censortt{He/Him} $\vert$
-        \begin{adjustbox}{raise=-2.1pt}
-            \ukraineflag{}\hspace{1pt}\usaflag{}
-        \end{adjustbox}
+      \censortt{\large{\textbf{\texttt{ill$\cdot$YAH stah$\cdot$REE$\cdot$kohw}}}}\, $\vert$\, %
+        \censortt{\textbf{He/Him}}\, $\vert$\, %
+        \begin{adjustbox}{raise=-2.1pt}%
+            \ukraineflag{}\hspace{1pt}\usaflag{}%
+        \end{adjustbox}%
     }
     %
-    \vspace{-0.10em}
+    \vspace{-0.2em}
     %
-    \centerline{\footnotesize{%
-        $\int _{2017}expertise\left(%
-        \,\text{Data Science, Cloud, System Design}\,%
-    \right)\,dt = 7^{\tiny{+}}$ YoE%
-    }}                                                                          % past
-    %
-    \vspace{-0.35em}
-    %
-    \small{Software Engineer
-        applying AI \& ML to build the future of \sout{digital} communication.  % present
-    \textit{Pursuing opportunities to put a dent in the universe.}}             % future
+\small{%
+  % Present
+  Software Engineer scaling AI to build the future of \sout{digital} communication.
+  % Past
+  Architected ML systems across $\bm{7}$ product lines achieving $\bm{98.5\%}$ accuracy.
+  % Future
+  Driven to solve impactful, real-world problems using data, science, and mathematics.}
 %
 % -------------------------------------------------------------------------------------------------
 \end{multicols}
 
 
-\displaycvTF{%
-    \vspace{-1em}
-}{%
-    \vspace{-2.25em}
-}
+\vspace{-2.5em}
 
-
-\section{Vocation}
+\section{Experience}
 % -------------------------------------------------------------------------------------------------
 \begin{ressection}
-% Google, Project Starline
+% Google, Project Starline/Beam
 % -------------------------------------------------------------------------------------------------
     \dato{1/2025} &
         \textbf{Software Engineer}
         %
         \hfill{}\censortt{%
             \textit{%
-                \href{http://research.google}{Research},%
-                \href{https://labs.google}{\begin{adjustbox}{raise=-1pt}\labslogo\end{adjustbox}\,Labs}
+                \href{http://research.google}{Research},
+                \href{https://labs.google}{Labs}
             }}
     \\
     %
     \googlelogo{}
-        & \censortt{\textbf{Google} Project Starline
+        & \censortt{\textbf{Google} Beam
           \hfill{}
     %
     }%
     %
      \\
         & \begin{itemize}
-          \item Owned internal camera hardware-in-the-loop test infrastructure/suite: enabled new tests, new hardware, executor platforms; fixed $\bm{> 10}$ issues, triaged failures; achieved first suite \textbf{pass in 105 days $\in$} $\bm{1}$ month of start date
-          \item Re-architected camera software updater for better multi-peripheral support, adding support for a new peripheral
+          \item Owned camera hardware-in-the-loop test (HILT) infrastructure, enabling new tests, hardware, and platforms
+          \setlength{\itemindent}{.25in} \item Eliminated $\bm{105}$-day camera HILT failure streak in first month, maintained via solving $\bm{10+}$ critical issues
+          \setlength{\itemindent}{0in}
 
+          \item Re-architected camera software updater for multi-peripheral support, integrating new hardware configurations
+
+          \item Reduced system image by $\bm{30\%}$ ($\bm{700\,\text{MB}}$), implemented CI/CD presubmit checks, and built developer tooling
           \displaycvT{%
-            % further compressed OS using tar,
-          \item Implemented various quality-of-life improvements, such as saving $\bm{700}\,\text{MB}$ from, strengthening presubmit checks
-            \item Achieved ``Sanjay number'' of $\bm{1}$ from an LGTM (code change approval) from
-              \textbf{\href{https://en.wikipedia.org/wiki/Sanjay_Ghemawat}{Sanjay Ghemawat}}
+          \item Achieved code approval from Google Fellow
+            \textbf{\href{https://en.wikipedia.org/wiki/Sanjay_Ghemawat}{Sanjay Ghemawat}} (``Sanjay Number of $\bm{1}$'')
           }
       \end{itemize}
       \displaycvT{%
@@ -178,20 +159,20 @@
 \end{ressection}
 
 \begin{ressection}
-% Google, Project Starline
+% Google, Project Starline/Beam
 % -------------------------------------------------------------------------------------------------
-    \dafrom{9/2023} &
+     \dato{1/2025} &
         \textbf{Software Engineer}
         %
         \hfill{}\censortt{%
             \textit{%
-                \href{http://research.google}{Research},%
-                \href{https://labs.google}{\begin{adjustbox}{raise=-1pt}\labslogo\end{adjustbox}\,Labs}
+                \href{http://research.google}{Research},
+                \href{https://labs.google}{Labs}
             }}
     \\
     %
-    \dato{1/2025}
-        & \censortt{\textbf{Google} Project Starline
+    \dafrom{9/2023}
+        & \censortt{\textbf{Google} Beam
           \hfill{}
     %
     }%
@@ -199,23 +180,23 @@
      \\
         \googlelogo{} & \begin{itemize}
 
-            \item Designed the end-to-end factory software architecture,
-                \textbf{\href{https://www.hp.com/us-en/newsroom/blogs/2024/hp-partners-with-google-to-bring-project-starline-into-workplace.html}{adopted by Google and HP}}
+            \item Designed end-to-end factory software architecture,
+                \textbf{\href{https://www.hp.com/us-en/newsroom/blogs/2024/hp-partners-with-google-to-bring-project-starline-into-workplace.html}{adopted by Google-HP partnership}}
         \setlength{\itemindent}{.25in}
-            \item Aligned $\bm{25}$ cross-functional engineering managers, ICs, security council, and program management
+            \item Aligned $\bm{25}$ cross-functional stakeholders spanning engineering, security, and program management
         \setlength{\itemindent}{0in}
 
-        \item Brought up in-house upload server infrastructure, facilitating factory data access for Google and HP
+        \item Built secure data pipeline between Google and HP factories, enabling real-time production monitoring
 
-            \item Implemented the standard factory interface for Starline's OS, responsible for interfacing, testing, and calibrating
+            \item Unified factory interface through comprehensive testing and calibration framework
         \setlength{\itemindent}{.25in}
             
-            \item Integrated six subsystems into said interface, including one audio functional test
-            \item Formulated Diagnostics framework, responsible for system health checking as a factory final-assembly test
+            \item Integrated $\bm{6}$ mission-critical subsystems: audio, camera, displays, lighting, OS, USB
+            \item Formulated system health-checking as a factory final-assembly test via a Diagnostics framework
         \setlength{\itemindent}{0in}
 
         
-        \item Contributed to the release process, automating ($\bm{> 25}$) factory preflight tests into a single Bash script
+      \item Automated $\bm{25^+}$ manual preflight tests, saving $\bm{2}^+$ days of engineer time in 2024 alone
       \end{itemize}
       \displaycvT{%
         \\
@@ -233,7 +214,7 @@
         \textbf{Software Engineer}
         \hfill{}\censortt{%
         % Formerly: Devices & Services Product Area (DSPA)
-        \textit{Platforms \& Devices Product Area (PDPA) }}
+        \textit{Platforms \& Devices Product Area}}
     \\
 
     \dafrom{12/2019} & \censortt{%
@@ -245,58 +226,55 @@
     
 
     \googlelogo{} & \begin{itemize}
-        \item Factory audio software DRI for \textbf{\censortt{%
+        \item Shipped $\bm{10\,\text{M}^+}$ \textbf{\censortt{%
             \href{https://store.google.com/us/product/nest_cam_battery}{Nest Cam},
             \href{https://store.google.com/intl/en/ideas/articles/new-pixel-tablet}{Pixel Tablet},
-            % \href{https://store.google.com/us/product/pixel_buds_pro}{Pixel Buds Pro},
-            \href{https://blog.google/products/pixel-buds/google-pixel-buds-review/}{Pixel Buds Pro},
-            \textnormal{and} \href{https://store.google.com/us/product/pixel_buds_pro_2}{Pixel Buds Pro 2}}}
+            \href{https://blog.google/products/pixel-buds/google-pixel-buds-review/}{Pixel Buds Pro 1/2}}}
+            devices as factory audio software DRI
 
         \displaycvT{%
         \setlength{\itemindent}{.25in}
                 
-            \item \textbf{Saved $\bm{\$120\text{k}}$ in program capex} by optimizing
-                \censortt{Nest Cam} ($\bm{52\%}$) and
-                \censortt{Pixel Tablet} ($\bm{23\%}$) test time
+            \item Optimized test execution generating $\bm{\$120K}$ annual savings:
+                \censortt{Nest Cam} ($\bm{52\%}$ time reduction),
+                \censortt{Pixel Tablet} ($\bm{23\%}$ reduction)
 
-                \item \censortt{Nest Cam's} test script was
-                    \textbf{fastest within \censortt{Google} audio} (by $\bm{36\%}$) during entire tenure
+                \item Achieved $\bm{36\%}$ faster performance than any other Google audio test suite with \censortt{Nest Cam}
 
-                \item \censortt{Nest Cam} was \censortt{Nest's} first fully-remote program, from PROTO to MP
+                \item Pioneered Nest's first fully-remote hardware program from prototype to mass production during COVID-19
         \setlength{\itemindent}{0in}
         }
 
-        \item Architected an ML system to make \censortt{Nest} and \censortt{Pixel}
-            factory data more insightful and actionable
+      \item Built ML-driven analytics system transforming factory data into actionable insights for $\bm{7}^\times$ \censortt{Nest} and \censortt{Pixel} products
         \setlength{\itemindent}{.25in}
             
-        \item Pioneered $\bm{6}$ novel ML use-cases, across $\bm{7}$ programs,
-            with accuracy up to $\bm{98.5\%}$
-        \item Example pipelines include clustering common failures from previous products,
-            classifying said failures in future products,
-            and using regression to produce new metrics or replace old ones
+        \item Deployed $\bm{6}$ ML applications:
+            clustering novel failure patterns to make $\bm{10}^+$ datasets,
+            classification of said patterns with $\bm{98.5\%}$ accuracy,
+            regression for additional quality metrics within $\nicefrac{\bm{1}}{\bm{2}}\,\text{dB}$ accuracy
         \setlength{\itemindent}{0in}
 
         % \item Hosted intern who built an ML data fusion of Lidar+photos to create depth-map and 3D reconstruction
 
-        \item Hosted intern who built a data fusion of $\left\{\text{``3D'' Lidar} + \text{``2D'' photos}\right\}$,
+        \item Mentored intern who built a data fusion of $\left\{\text{``3D'' Lidar} + \text{``2D'' photos}\right\}$,
             implementing feature matching via ML \href{https://arxiv.org/abs/1911.11763}{SuperGlue Network} and
             \href{https://docs.opencv.org/3.4/d1/d89/tutorial_py_orb.html}{OpenCV ORB},
             producing color depth-maps and interactive 3D reconstructions
 
         \displaycvT{%
-            \item Founded or co-founded efforts to scale software within entire organization:
+            \item Spearheaded organization-wide scaling initiatives:
                 
-                documentation overhaul (internal \textbf{$\bm{350}$ new users/month, $\bm{750}$ new sessions/month}),
-                boost software testing (\textbf{hundreds of new test cases}),
-                test station adoption org-common or team-common libraries (\textbf{code reduction up to $\bm{70\%}$})
+                documentation overhaul ($\bm{350}$ users/month, $\bm{750}$ sessions/month),
+                expanded test coverage (hundreds of new test cases),
+                standardized libraries achieving $\bm{70\%}$ code reduction
 
-            \item Implemented initial factory data downloader (adopted by org, external teams),
-                common audio test framework (entire team),
-                and lead forums for knowledge sharing (team participation)
+            \item Created foundational tools adopted organization-wide:
+                factory data downloader,
+                unified audio test framework,
+                knowledge-sharing platforms
 
             % 393,899 deleted, 0 changed, 965,545 added, 1,359,444 total lines of code.
-            \item Contributed $\bm{1.3}$ million lines of code, config, and artifacts across across 16 language types
+            \item Contributed $\bm{1.3M}$ lines of code across $\bm{16}$ languages to production systems
         }
 
     \end{itemize}
@@ -304,7 +282,7 @@
     \\
     & \pythonlogo{}\textit{Python}
         matplotlib, numpy, pandas, SciPy
-      \scikitlogo{}\tensorflowlogo{} git
+      \scikitlogo{}\tensorflowlogo{} Git
     }
     %
 % -------------------------------------------------------------------------------------------------
@@ -313,9 +291,9 @@
 
 
 \displaycvT{%
-    \vspace{-5pt}
+  \vspace{-5pt}\centerline{$\sum$
     \hrulefill{\normalsize{\censortt{Garmin},
-      $\bm{2}\text{y}\, \bm{6}\text{m}$}}
+      $\bm{2}\text{y}\, \bm{6}\text{m}$}}}
 }
 
 \begin{ressection}
@@ -337,28 +315,28 @@
 
     \garminlogo{}
     & \begin{itemize}
-        \item \textbf{Lead system testing effort} to meet DO-178B compliance on
-            \censortt{\textbf{\href{https://www.garmin.com/en-US/p/664160}{GDL-60}}}
+        \item Led system testing achieving DO-178B aviation safety compliance for
+            \censortt{\textbf{\href{https://www.garmin.com/en-US/p/664160}{GDL-60}}} datalink receiver
 
         \displaycvT{%
             \setlength{\itemindent}{.25in}
-                \item Designed new test architecture, supported test infrastructure, and wrote test plans
+                \item Designed test architecture, built infrastructure, and authored comprehensive test plans
             \setlength{\itemindent}{0in}
         }
 
-        \item Implemented embedded software to synchronize configuration between two operating systems
+        \item Developed embedded software enabling configuration sync across dual OS environments (Garmin, Linux)
 
         \displaycvT{%
-            \item Lead a high-school focused engineering project to build and race a hovercraft,
-                presented at \censortt{Kansas State}'s ACM,
-                guided children with Bring Your Child To Work Day projects,
-                hosted tours
+            \item Led STEM outreach:
+                hovercraft engineering project (presented at \censortt{Kansas State} ACM),
+                mentored Bring Your Child To Work Day,
+                conducted facility tours
         }
     \end{itemize}
     \displaycvT{
       \\
       & \clogo{}\pythonlogo{}
-        git
+        Git
     }
     %
 % -------------------------------------------------------------------------------------------------
@@ -386,10 +364,10 @@
     & \begin{itemize}
         % Hive
 
-        \item Implemented validation system for a highly-utilized aviation tool,
-            resulting in \textbf{$\bm{25\%}$ code reduction} in affected classes
+        \item Built validation system for aviation tool achieving
+            $\bm{25\%}$ code reduction while enhancing reliability
         
-        \item Implemented many ($>\bm{10}$) quality-of-life improvements for aforementioned tool
+        \item Delivered $\bm{10^+}$ quality-of-life enhancements for aforementioned aviation tool
     \end{itemize}
 % -------------------------------------------------------------------------------------------------
 \end{ressection}
@@ -413,9 +391,8 @@
     \garminlogo{}
     & \begin{itemize}
         
-        \item Enhanced reliability (\textbf{$\bm{80\%}$ to $\bm{100\%}$ success rate}) and
-            execution time ($\bm{5\times}$ \textbf{speed up}) of automation suite by
-            developing on-device APIs and consuming new, optimized APIs in test suite
+      \item Improved automation suite reliability from $\bm{80\%}$ to $\bm{100\%}$ and achieved
+            $\bm{5^\times}$ speed improvement through API optimization
     \end{itemize} \\
     & \cpplogo{}
       Visual Studio
@@ -445,18 +422,14 @@
 
     \msatlogo{}
     & \begin{itemize}
-        \item \textbf{Lead $\bm{6}$ person team} of
-            undergraduate and graduate students to deliver nanosatellite payload:
-            mid-flight, stereoscopic capture (via \censortt{MR SAT}) and 3D reconstruction
-            of a paired satellite (\censortt{MRS SAT})
+        \item Led $\bm{6}$-person interdisciplinary team developing nanosatellite payload with
+            real-time stereoscopic imaging and 3D reconstruction for satellite monitoring
 
-        \item Wrote synchronous flight capture code across $2\times$ cameras to run on-device (Rasperry Pi)
+        \item Architected synchronized dual-camera system on Raspberry Pi for precise, space-based stereoscopic imaging
 
-        \item Collaborated with chief engineer, program manager, and program subsystems
-            to architect flight code
+        \item Collaborated with chief engineer to design flight software meeting aerospace standards
 
-        \item Satellite is undergoing testing and reviews,
-            scheduled for launch on \texttt{Summer \texttt{2024}}
+        \item Achieved critical design review approval; satellite launch scheduled for 2026
     \end{itemize}
 % -------------------------------------------------------------------------------------------------
 \end{ressection}
@@ -479,12 +452,10 @@
 
     \missouristlogo{}
     & \begin{itemize}
-        \item Taught programming concepts to freshman/sophomore-level students across $3\times$ classes:
-            Introduction To Programming (Class+Lab),
-            Data Structures (Lab)
-        \item Created assignments, graded assignments, tests for \textbf{class sizes upto $\bm{60}$ students}
-        \item Automated grading with tools to
-            detect plagrism, styleguide conformance, and course-specific rules
+        \item Taught programming fundamentals to hundreds of students across
+          Introduction to Programming and Data Structures (class+lab)
+        \item Successfully detected plagiarism, style infractions, and bugs via self-developed automation using
+          \href{https://theory.stanford.edu/~aiken/moss/}{Stanford's MOSS}
     \end{itemize}
 % -------------------------------------------------------------------------------------------------
 \end{ressection}
@@ -510,9 +481,8 @@
     
 
     & \begin{itemize}
-        \item Created user manual to serve as a guide for all new employment services assistants
-        \item Maintained large student-employment databases via college's content management system
-        \item Designed posters, fliers, and newsletters for campus announcements
+        \item Created user manual adopted as standard training resource for all new assistants
+        \item Managed campus-wide student employment database and designed marketing materials
     \end{itemize}
 % -------------------------------------------------------------------------------------------------
 \end{ressection}
@@ -537,10 +507,8 @@
 
     & \begin{itemize}
         
-        \item Supported $\bm{6}$ projects for various clients:
-            creating websites, mockups, data mining, data entry
-        \item Specialized in Wordpress and Bootstrap frameworks,
-             crafting sites to meet client's requirements
+        \item Delivered $\bm{6}$ client projects including websites, UI/UX design, and data analytics
+        \item Specialized in WordPress and Bootstrap for responsive web development
     \end{itemize}
 % -------------------------------------------------------------------------------------------------
 \end{ressection}
@@ -554,28 +522,31 @@
 % -------------------------------------------------------------------------------------------------
 \displaycvT{% BEGIN displaycv
     \googlelogo{} &
-        \textit{Software Engineer} \censortt{Project Starline \textbf{Google}}%
-        \dotfill{}\texttt{\phantom{0}9/2023--present} \\
+        \textit{Software Engineer} \censortt{\textbf{Google} Beam}%
+        \dotfill{}\texttt{\phantom{0}1/2025--present} \\
     \googlelogo{} &
-        \textit{Software Engineer} \censortt{Central Test Engineering \textbf{Google}}%
+        \textit{Software Engineer} \censortt{\textbf{Google} Beam}%
+        \dotfill{}\texttt{\phantom{0}9/2023--\phantom{0}1/2025} \\
+    \googlelogo{} &
+        \textit{Software Engineer} \censortt{\textbf{Google} Central Test Engineering}%
         \dotfill{}\texttt{12/2019--\phantom{0}9/2023} \\
 
     
 
     \garminlogo{} &
-        \textit{Software Engineer} \censortt{Safety \& Datalink \textbf{Garmin}}%
+        \textit{Software Engineer} \censortt{\textbf{Garmin} Safety \& Datalink}%
         \dotfill{}\texttt{\phantom{0}8/2017--\phantom{0}6/2018} \\
 } % END displaycv
     \garminlogo{} &
-        \textit{Software Engineering Intern} \censortt{Interfaces/Data Routing \textbf{Garmin}}%
+        \textit{Software Engineering Intern} \censortt{\textbf{Garmin} Interfaces/Data Routing}%
         \dotfill{}\texttt{\phantom{0}8/2017--\phantom{0}6/2018} \\
     \garminlogo{} &
-        \textit{Software Engineering Intern} \censortt{Automotive OEM \textbf{Garmin}}%
+        \textit{Software Engineering Intern} \censortt{\textbf{Garmin} Automotive OEM}%
         \dotfill{}\texttt{\phantom{0}5/2017--\phantom{0}8/2017} \\
 
 \displaycvT{%
     \missouristlogo{} &
-        \textit{Bachelor of Science} \censortt{Computer Science \textbf{Missouri S\&T}}%
+        \textit{Bachelor of Science} \censortt{\textbf{Missouri S\&T} Computer Science}%
         \dotfill{}\texttt{\phantom{0}1/2015--12/2018} \\
 } %
 
@@ -583,25 +554,25 @@
     \textit{Team Lead \& DRI} \censortt{\textbf{Missouri S\&T Satellite Team}}%
     \dotfill{}\texttt{\phantom{0}4/2016--12/2017} \\
 \missouristlogo{} &
-    \textit{Undergraduate Teaching Assistant} \censortt{Computer Science \textbf{Missouri S\&T}}%
+    \textit{Undergraduate Teaching Assistant} \censortt{\textbf{Missouri S\&T} Computer Science}%
     \dotfill{}\texttt{\phantom{0}8/2016--\phantom{0}4/2017}%
 %
 %
 \displaycvT{%
     \\
     \missouristlogo{} &
-        \textit{Computer Lab Assistant} \censortt{\textbf{Missouri S\&T}}%
+        \textit{Assistant} \censortt{\textbf{Missouri S\&T} Computer Lab}%
         \dotfill{}\texttt{\phantom{0}1/2016--\phantom{0}4/2017} \\
 
     \jeffcologo{} &
-        \textit{Employment Services Assistant} \censortt{\textbf{Jefferson College}}%
+        \textit{Assistant} \censortt{\textbf{Jefferson College} Employment Services}%
             \dotfill{}\texttt{9/2014--12/2014}, \texttt{5/2015--8/2015}, \texttt{\phantom{0}5/2016--\phantom{0}8/2016} \\
 
     & \textit{Web Developer} \textbf{Freelance}%
     \dotfill{}\texttt{\phantom{0}5/2014--\phantom{0}8/2014} \\
 
     \movallogo{} &
-        \textit{Computer Lab Assistant} \censortt{\textbf{Missouri Valley College}}%
+        \textit{Assistant} \censortt{\textbf{Missouri Valley College} Computer Lab}%
         \dotfill{}\texttt{\phantom{0}9/2013--\phantom{0}5/2014}%
 } %
 % -------------------------------------------------------------------------------------------------
@@ -609,41 +580,40 @@
 %
 \vspace{0.25em}
 %
-\section{Attributes}
+\section{Expertise}
 % -------------------------------------------------------------------------------------------------
 \begin{ressection}
 % Technology
 % -------------------------------------------------------------------------------------------------
-    \dafrom{tech} &
-
-    \textbf{Languages}
+    \dafrom{tech}
+    & \textbf{Languages}
         Python,
         C++,
         C,
         Bash,
         SQL,
-        LaTeX
-        \hfill{}
-        \pythonlogo{}\cpplogo{}\clogo{}\bashlogo{}\sqllogo{}\latexlogo{}
-    \\
-        & \quad{} \textit{Previous}
-            Swift,
-            C\#,
-            Lua,
-            Perl\displaycvT{\hfill{}
-            \swiftlogo{} \csharplogo{}\lualogo{}\perllogo{}
-
-                \quad{} Assembly,
-                Lisp,
-                Matlab,
-                Vimscript,
-                Basic,
-                AppleScript,
-                ActionScript
-        }
-        
-
-    \textbf{ML}
+        LaTeX,
+        Swift,
+        C\#,
+        Lua,
+        Perl
+        \hfill{}%
+        \pythonlogo{}\cpplogo{}\clogo{}\bashlogo{}\sqllogo{}\latexlogo{}\swiftlogo{}\csharplogo{}\lualogo{}\perllogo{}%
+          \\
+        \displaycvT{%
+          & \quad{} \textit{Additional}
+              Assembly,
+              Lisp,
+              Matlab,
+              Vimscript,
+              Basic,
+              AppleScript,
+              ActionScript
+            \\
+        }%
+        %
+        %
+    & \textbf{ML/AI}
         \href{https://scikit-learn.org/}{scikit-learn},
         \href{https://www.tensorflow.org/}{TensorFlow},
         \href{https://colab.sandbox.google.com/}{Colab},
@@ -651,20 +621,19 @@
         \hfill{}
         \scikitlogo{}\tensorflowlogo{}\gcplogo{}
     \\
-
+    %
     & \textbf{Tools}
         \href{https://www.docker.com}{Docker},
         \href{https://git-scm.com/}{Git},
-        \href{https://i3wm.org/}{i3wm},
         \href{https://en.wikipedia.org/wiki/Make_(software)}{Make},
         \href{https://en.wikipedia.org/wiki/Regular_expression}{regex},
         \href{https://github.com/tmux/tmux/wiki}{tmux},
-        \href{https://github.com/tmuxinator/tmuxinator}{Tmuxinator},
         \href{https://www.vim.org/}{Vim},
-        \href{https://developer.apple.com/documentation/}{Xcode \& iOS toolchain},
-        \href{https://ohmyz.sh/}{ZSH}
+        \href{https://developer.apple.com/documentation/}{Xcode},
+        CI/CD,
+        Linux
     \\
-
+    %
     \displaycvT{%
         & \textbf{Markup}
           \href{https://en.wikipedia.org/wiki/CSS}{CSS},
@@ -673,12 +642,12 @@
           \href{https://en.wikipedia.org/wiki/Markdown}{Markdown},
           \href{https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html}{reStructuredText},
           \href{https://en.wikipedia.org/wiki/XML}{XML},
-          \href{https://yaml.org/}{YaML}
+          \href{https://yaml.org/}{YAML}
           \\
     }
-
+    %
     
-
+    %
     & \textbf{Python}
         \href{https://cython.org}{Cython},
         \href{https://matplotlib.org/}{matplotlib},
@@ -686,12 +655,12 @@
         \href{https://pandas.pydata.org/}{pandas},
         \href{https://docs.python.org/3/library/pdb.html}{pdb},
         \href{https://github.com/pyenv/pyenv}{pyenv},
-        \href{}{SciPy},
+        \href{https://scipy.org}{SciPy},
         \href{https://www.sphinx-doc.org/en/master/}{sphinx},
         \href{https://pypi.org/project/tox/}{tox},
         \href{https://docs.python.org/3/library/venv.html}{venv}
     %
-    % \displaycv{%
+    % \displaycvT{%
         \\
         & \textbf{C++$\bm{17}$}
             \href{https://github.com/abseil/abseil-cpp}{abseil},
@@ -722,33 +691,33 @@
         %
     }{%
         %
-        \dafrom{misc} &
+        \dafrom{impact} &
         %
     }%
     %
     %
     %
-    $\bm{8}$ \displaycvT{consumer/enterprise }projects,
+    $\bm{8}$ \displaycvT{consumer/enterprise }products launched,
     %
     %
     %
-    $\bm{15^+}$ interviews\displaycvT{ conducted},
+    $\bm{15^+}$ interviews conducted,
     %
     %
     %
-    $\bm{1}$ intern\displaycvT{ hosted},
+    $\bm{1}$ intern mentored,
     %
     %
     %
-    $\bm{> 800}$ CLs\displaycvT{ submitted},
+    $\bm{800^+}$ CLs submitted,
     %
     %
     %
-    $\bm{> 300}$ code reviews,
+    $\bm{300^+}$ code reviews,
     %
     %
     %
-    $\bm{> 100}$ ``tickets''\displaycvT{ closed},
+    $\bm{100^+}$ bugs fixed,
     %
     %
     %
@@ -763,25 +732,25 @@
 % -------------------------------------------------------------------------------------------------
         \begin{ressection}
     %
-        \dafrom{kudos} &
+        \dafrom{awards} &
     }%
     %
     %
     %
-    $\bm{8\times}$ \censortt{Google Peer} Bonus,
+    $\bm{8^\times}$ \censortt{Google} Peer Bonus,
     %
     %
     %
-    $\bm{4\times}$ \censortt{Google} Spot Bonus,
+    $\bm{4^\times}$ \censortt{Google} Spot Bonus,
     %
     %
     %
-    \censortt{Googler} Thank You Campaign receipient,
+    \censortt{Google} Recognition Award,
     %
     %
     %
     \displaycvT{%
-      \{\censortt{Garmin} new-hire, \censortt{Google} new-hire, \censortt{Starline}\} trivia winner,
+      \{\censortt{Garmin}, \censortt{Google}, \censortt{Starline}\} trivia champion,
     }%
     %
     %
@@ -792,18 +761,18 @@
     Summa Cum Laude honors, % 
     %
     % \displaycv{%
-        $\bm{6\times}$ Dean's List Award, % 
+        $\bm{6^\times}$ Dean's List, % 
     % }
     %
     $\bm{18^\text{th}/229}$
     \displaycvTF{%
       \censortt{%
           \href{https://open.kattis.com/universities/mst.edu}{Missouri S\&T}
-          \href{https://open.kattis.com/users/starikov}{ACM SIG Competition}%
-      } ranking
+          \href{https://open.kattis.com/users/starikov}{ACM Competitor}%
+      }
     }{%
       \censortt{%
-        \href{https://open.kattis.com/users/starikov}{S\&T competitive programmer}
+        \href{https://open.kattis.com/users/starikov}{S\&T programmer}
       }%
     }%
     %
@@ -887,9 +856,9 @@
     \textbf{Associations}
         Cross-Country \censortt{%
             (Class $\bm{3}$,
-            $\bm{2\times}$ All-District individual [\href{https://www.athletic.net/CrossCountry/Results/Meet.aspx?Meet=43791\&show=all}{%
+            $\bm{2^\times}$ All-District individual [\href{https://www.athletic.net/CrossCountry/Results/Meet.aspx?Meet=43791\&show=all}{%
                 \texttt{2011}}\texttt{-}\href{https://www.athletic.net/CrossCountry/Division/List.aspx?DivID=12615}{\texttt{2012}}],
-            $\bm{1\times}$ All-District team [\texttt{2012}],
+            $\bm{1^\times}$ All-District team [\texttt{2012}],
             $\bm{\#5}$ team state ranking [\href{https://www.trxctiming.com/MSHSAA_State_XC/2011/2011_class_3_boys_1_mile.htm}{\texttt{2012}}])},
         Track \& Field,
         Future Business Leaders of America (FBLA)
