@@ -12,7 +12,7 @@
 %
 %   https://github.com/IllyaStarikov/resume
 %
-% -------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
 
 % \documentclass[10pt,letterpaper]{article}  % resume, american 10 x 8.5
 
@@ -46,897 +46,957 @@
 % settings
 \begin{document}
 \pagestyle{empty}
-% -------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
 
 
 % Title
-% -------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
 \par{\centering{\censortt{%
-    {\mytitlefont{\HUGE{Illya Starikov}}}
-}\bigskip\par}}%
+			{\mytitlefont{\HUGE{Illya Starikov}}}
+		}\bigskip\par}}%
 %
 %
 \vspace{-2em}
 %
 %
 \begin{multicols}{2}%
-\begin{tabular}{w{r}{1.5em}l}
-% Contact
-% -------------------------------------------------------------------------------------------------
-\faHome{} & \censortt{%
-    \href{https://starikov.co}{\textbf{Starikov.co}}} \\
+	\begin{tabular}{w{r}{1.5em}l}
+		% Contact
+		% ------------------------------------------------------------------------------------
+		\faReplyAll{} & \censortt{%
+		\href{mailto:illya@starikov.co}{\textbf{illya@starikov.co}}}          \\
+		
 
-\ifthenelse{\boolean{displaycontact}}{%
+		\ifthenelse{\boolean{displaycontact}}{%
+			
+		}{%
+		\faPhone{}    & \textbf{+1} \censor{                                  %
+		(XXX) XXX — XXXX}                                                     \\
+		}%
 
-}{%
-    \faReplyAll{} & \censor{%
-      \censortt{some\_email}}\textbf{@starikov.co} \\
-}%
+		\faMapPin{}\; & \censortt{\textbf{San Francisco Bay Area}}            \\
 
+		\faGithub{}   & \href{https://github.com/illyastarikov}{\censortt{\textbf{@illyaStarikov}}}
+                  $\vert$
+                  \faLinkedin{} \href{https://linkedin.com/in/illyastarikov}{\censortt{\textbf{@illyastarikov}}} \\
+		% ------------------------------------------------------------------------------------
+	\end{tabular}
 
-
-\ifthenelse{\boolean{displaycontact}}{%
-    
-}{%
-    \faPhone{} & $\bm{+1}$ \censor{%
-        (XXX) XXX — XXXX} \\
-}%
-
-
-  \faMapPin{}\; & \censortt{\textbf{San Francisco Bay Area}} \\
-% -------------------------------------------------------------------------------------------------
-\end{tabular}
-
-% Summary
-% -------------------------------------------------------------------------------------------------
-    % Start date: May 2017
-    \centerline{%
-      \censortt{\large{\textbf{\texttt{ill$\cdot$YAH stah$\cdot$REE$\cdot$kohw}}}}\, $\vert$\, %
-        \censortt{\textbf{He/Him}}\, $\vert$\, %
-        \begin{adjustbox}{raise=-2.1pt}%
-            \ukraineflag{}\hspace{1pt}\usaflag{}%
-        \end{adjustbox}%
-    }
-    %
-    \vspace{-0.2em}
-    %
-\small{%
-  % Present
-  Software Engineer scaling AI to build the future of \sout{digital} communication.
-  % Past
-  Architected ML systems across $\bm{7}$ product lines achieving $\bm{98.5\%}$ accuracy.
-  % Future
-  Driven to solve impactful, real-world problems using data, science, and mathematics.}
-%
-% -------------------------------------------------------------------------------------------------
+	% Summary
+	% --------------------------------------------------------------------------------
+	% Start date: May 2017
+	\centerline{%
+		\censortt{\large{\textbf{\texttt{ill$\cdot$YAH stah$\cdot$REE$\cdot$kohw}}}}\, $\vert$\, %
+		\censortt{\textbf{He/Him}}\, $\vert$\, %
+		\begin{adjustbox}{raise=-2.1pt}%
+			\ukraineflag{}\hspace{1pt}\usaflag{}%
+		\end{adjustbox}%
+	}
+	%
+	\vspace{-0.2em}
+	%
+	\small{%
+		\textbf{Software Engineer, Google, 8 years.}
+		Shipped \textbf{10M+} Pixel, Nest, and Beam devices.
+		Built ML systems across \textbf{7} product lines: anomaly detection via clustering,
+		failure classification (\textbf{98.5\%} accuracy),
+		quality regression (\textbf{$\pm$0.5 dB}).
+		Production-hardened, research-ready.}
+	%
+	% --------------------------------------------------------------------------------
 \end{multicols}
 
 
 \vspace{-2.5em}
 
 \section{Experience}
-% -------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
 \begin{ressection}
-% Google, Project Starline/Beam
-% -------------------------------------------------------------------------------------------------
-    \dato{1/2025} &
-        \textbf{Software Engineer}
-        %
-        \hfill{}\censortt{%
-            \textit{%
-                \href{http://research.google}{Research},
-                \href{https://labs.google}{Labs}
-            }}
-    \\
-    %
-    \googlelogo{}
-        & \censortt{\textbf{Google} Beam
-          \hfill{}
-    %
-    }%
-    %
-     \\
-        & \begin{itemize}
-          \item Owned camera hardware-in-the-loop test (HILT) infrastructure, enabling new tests, hardware, and platforms
-          \setlength{\itemindent}{.25in} \item Eliminated $\bm{105}$-day camera HILT failure streak $\in \bm{1}$ month of start-date, resolved $\bm{10^+}$ blocking issues
-          \setlength{\itemindent}{0in}
+	% Google, Project Starline/Beam (Consolidated)
+	% --------------------------------------------------------------------------------
+	&
+	\textbf{Software Engineer}
+	%
+	\hfill{}\censortt{%
+		\textit{%
+			\href{http://research.google}{Research}, %
+			\href{https://labs.google}{Labs}%
+		}}
+	\\
+	%
+	\googlelogo{}
+	& \censortt{\textbf{Google} Beam
+		\hfill{}
+		%
+		}%
+	%
+	 \\
+	\dato{1/2025}
+	& \textbf{Camera Team} \\
+	& \begin{itemize}
+		\item Owned camera hardware-in-the-loop test (HILT) infrastructure, enabling new tests,
+		      hardware, and platforms
+		      \setlength{\itemindent}{.25in} \item Eliminated \textbf{105}-day camera HILT failure
+		      streak within \textbf{1} month of start-date, resolved \textbf{10+} blocking issues
+		      \item Collaborated with team to improve pass rate from \textbf{30\%} to \textbf{100\%},
+		      grow suite from \textbf{10} to \textbf{30+} tests
+		      \setlength{\itemindent}{0in}
 
-          \item Re-architected camera software updater for multi-peripheral support, integrating new hardware configurations
+		\item Re-architected camera software updater for multi-peripheral support,
+		      integrating new hardware configurations
 
-          \item Reduced system image by $\bm{30\%}$ ($\bm{700\,\text{MB}}$), implemented CI/CD presubmit checks, and built developer tooling
-          \displaycvT{%
-          \item Achieved code approval from Google Fellow
-            \textbf{\href{https://en.wikipedia.org/wiki/Sanjay_Ghemawat}{Sanjay Ghemawat}} (``Sanjay Number of $\bm{1}$'')
-          }
-      \end{itemize}
-      \displaycvT{%
-        \\
-        & \cpplogo{}\pythonlogo{}\bashlogo{}
-        \textit{C++, Bash}
-      }
-      %
-% -------------------------------------------------------------------------------------------------
+		\item Drove cross-platform integration spanning device state management, client
+		      services, networking, and OS layers
+
+		      \displaycvT{%
+		\item Reduced system image by \textbf{30\%} (\textbf{700 MB}), implemented CI/CD
+		      presubmit checks, and built developer tooling
+		      }
+
+		      \displaycvT{%
+		\item Achieved code approval from Google Fellow
+		      \textbf{\href{https://en.wikipedia.org/wiki/Sanjay_Ghemawat}{Sanjay Ghemawat}}
+		      (``Sanjay Number of \textbf{1}'')
+		      }
+	\end{itemize} \\
+	& \\[-10pt]
+	\dafrom{9/2023} & \textbf{Platforms} \\
+	& \begin{itemize}
+
+		\item Designed end-to-end factory software architecture,
+		      \textbf{\href{https://www.hp.com/us-en/newsroom/blogs/2024/hp-partners-with-google-to-bring-project-starline-into-workplace.html}%
+		      {adopted by Google-HP partnership}}
+		      \setlength{\itemindent}{.25in}
+		\item Aligned \textbf{25} cross-functional stakeholders spanning engineering, security,
+		      and program management
+		      \setlength{\itemindent}{0in}
+
+		\item Built secure data pipeline between Google and HP factories, enabling real-time
+		      production monitoring
+
+		\item Unified factory interface through comprehensive testing and calibration framework
+		      \setlength{\itemindent}{.25in}
+		      
+		\item Formulated system health-checking as a factory final-assembly test via a Diagnostics framework
+		\item Integrated \textbf{6} mission-critical subsystems: audio, camera, displays, lighting, OS, USB
+		      \setlength{\itemindent}{0in}
+
+		      
+		\item Automated \textbf{25+} manual preflight tests, saving \textbf{2+} days of engineer time in
+		  2024 alone
+	\end{itemize}
+	\displaycvT{%
+		\\
+		& \cpplogo{}\pythonlogo{}\bashlogo{}
+		\textit{C++, Python, Bash}
+	}
+	%
+	% --------------------------------------------------------------------------------
 \end{ressection}
 
 \begin{ressection}
-% Google, Project Starline/Beam
-% -------------------------------------------------------------------------------------------------
-     \dato{1/2025} &
-        \textbf{Software Engineer}
-        %
-        \hfill{}\censortt{%
-            \textit{%
-                \href{http://research.google}{Research},
-                \href{https://labs.google}{Labs}
-            }}
-    \\
-    %
-    \dafrom{9/2023}
-        & \censortt{\textbf{Google} Beam
-          \hfill{}
-    %
-    }%
-    %
-     \\
-        \googlelogo{} & \begin{itemize}
+	% Google, CTE
+	% --------------------------------------------------------------------------------
+	\dato{9/2023} &
+	\textbf{Software Engineer}
+	\hfill{}\censortt{%
+		% Formerly: Devices & Services Product Area (DSPA)
+		\textit{Platforms \& Devices Product Area}}
+	\\
 
-            \item Designed end-to-end factory software architecture,
-                \textbf{\href{https://www.hp.com/us-en/newsroom/blogs/2024/hp-partners-with-google-to-bring-project-starline-into-workplace.html}{adopted by Google-HP partnership}}
-        \setlength{\itemindent}{.25in}
-            \item Aligned $\bm{25}$ cross-functional stakeholders spanning engineering, security, and program management
-        \setlength{\itemindent}{0in}
+	\googlelogo{} & \censortt{%
+		\textbf{Google} Central Test Engineering
+		\hfill{}}%
+	%
+	\\
 
-        \item Built secure data pipeline between Google and HP factories, enabling real-time production monitoring [spot bonus]
+	
 
-            \item Unified factory interface through comprehensive testing and calibration framework
-        \setlength{\itemindent}{.25in}
-            
-            \item Integrated $\bm{6}$ mission-critical subsystems: audio, camera, displays, lighting, OS, USB
-            \item Formulated system health-checking as a factory final-assembly test via a Diagnostics framework [spot bonus]
-        \setlength{\itemindent}{0in}
+	& \begin{itemize}
+		\item Shipped \textbf{10M+} \textbf{\censortt{%
+				      \href{https://store.google.com/us/product/nest_cam_battery}{Nest Cam},
+				      \href{https://store.google.com/intl/en/ideas/articles/new-pixel-tablet}{Pixel Tablet},
+				      \href{https://blog.google/products/pixel-buds/google-pixel-buds-review/}{Pixel Buds
+				        Pro/2}}}
+		      devices as factory audio software DRI
 
-        
-      \item Automated $\bm{25^+}$ manual preflight tests, saving $\bm{2}^+$ days of engineer time in 2024 alone
-      \end{itemize}
-      \displaycvT{%
-        \\
-        & \cpplogo{}\pythonlogo{}\bashlogo{}
-        \textit{C++, Python, Bash}
-      }
-      %
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
+		      \setlength{\itemindent}{.25in}
+		      
 
-\begin{ressection}
-% Google, CTE
-% -------------------------------------------------------------------------------------------------
-    \dato{9/2023} &
-        \textbf{Software Engineer}
-        \hfill{}\censortt{%
-        % Formerly: Devices & Services Product Area (DSPA)
-        \textit{Platforms \& Devices Product Area}}
-    \\
+		\item Saved \textbf{\$120k} in capex via test code optimizations:
+		      \censortt{Nest Cam} (\textbf{52\%} time reduced),
+		      \censortt{Pixel Tablet} (\textbf{23\%})
 
-    \dafrom{12/2019} & \censortt{%
-        \textbf{Google} Central Test Engineering
-        \hfill{}}%
-        %
-    \\
+		      \displaycvT{%
+		\item Achieved \textbf{36\%} faster performance than any other Google audio test suite with
+		  \censortt{Nest Cam}
 
-    
+		\item Pioneered Nest's first fully-remote hardware program from prototype to mass production
+		  during COVID-19
+		      }
+		      \setlength{\itemindent}{0in}
 
-    \googlelogo{} & \begin{itemize}
-        \item Shipped $\bm{10\,\text{M}^+}$ \textbf{\censortt{%
-            \href{https://store.google.com/us/product/nest_cam_battery}{Nest Cam},
-            \href{https://store.google.com/intl/en/ideas/articles/new-pixel-tablet}{Pixel Tablet},
-            \href{https://blog.google/products/pixel-buds/google-pixel-buds-review/}{Pixel Buds Pro/2}}}
-            devices as factory audio software DRI [$\bm{2}^\times$ peer bonus]
+		\item Shipped \textbf{6} ML analytics models for automated fault detection across
+		      \textbf{7} \censortt{Nest}/\censortt{Pixel} products
+		      \setlength{\itemindent}{.25in}
+		      
+		\item Applied clustering to surface \textbf{10+} previously unknown defect patterns,
+		      generating labeled datasets
+		\item Built classification models achieving \textbf{98.5\%} accuracy, automating defect detection
+		\item Developed regression models predicting quality metrics within \textbf{$\pm$0.5 dB},
+		      replacing manual measurement
+		      \setlength{\itemindent}{0in}
 
-        \setlength{\itemindent}{.25in}
-                
-            \item Saved $\bm{\$120}\,\text{k}$ in capex via test code optimizations:
-                \censortt{Nest Cam} ($\bm{52\%}$ time reduced),
-                \censortt{Pixel Tablet} ($\bm{23\%}$)
+		      % \item Hosted intern who built an ML data fusion of Lidar+photos to create depth-map and 
+            % 3D reconstruction
 
-                \displaycvT{%
-                  \item Achieved $\bm{36\%}$ faster performance than any other Google audio test suite with \censortt{Nest Cam}
+		\item Mentored intern who built a data fusion of $\left\{\text{``3D'' Lidar} + \text{``2D''
+		  photos}\right\}$,
+		      implementing feature matching via ML \href{https://arxiv.org/abs/1911.11763}{SuperGlue
+		        Network} and
+		      \href{https://docs.opencv.org/3.4/d1/d89/tutorial_py_orb.html}{OpenCV ORB},
+		      producing color depth-maps and interactive 3D reconstructions
 
-                  \item Pioneered Nest's first fully-remote hardware program from prototype to mass production during COVID-19
-          }
-        \setlength{\itemindent}{0in}
+		      \displaycvT{%
+		\item Spearheaded organization-wide scaling initiatives:
+		      
+		      documentation overhaul (\textbf{350} users/month, \textbf{750} sessions/month),
+		      expanded test coverage (hundreds of new test cases),
+		      standardized libraries achieving \textbf{70\%} code reduction
 
-      \item Built ML-driven analytics system transforming factory data into actionable insights for $\bm{7}^\times$ \censortt{Nest} and \censortt{Pixel} products
-        \setlength{\itemindent}{.25in}
-            
-        \item Deployed $\bm{6}$ ML applications:
-            clustering novel failure patterns to make $\bm{10}^+$ datasets,
-            classification of said patterns with $\bm{98.5\%}$ accuracy,
-            regression for additional quality metrics within $\nicefrac{\bm{1}}{\bm{2}}\,\text{dB}$ accuracy [$\bm{2}^\times$ peer bonus]
-        \setlength{\itemindent}{0in}
+		\item Created foundational tools adopted organization-wide:
+		      factory data downloader,
+		      unified audio test framework,
+		      knowledge-sharing platforms
 
-        % \item Hosted intern who built an ML data fusion of Lidar+photos to create depth-map and 3D reconstruction
+		      % 393,899 deleted, 0 changed, 965,545 added, 1,359,444 total lines of code.
+		\item Contributed \textbf{1.3M} lines of code across \textbf{16} languages to production
+		  systems
+		      }
 
-        \item Mentored intern who built a data fusion of $\left\{\text{``3D'' Lidar} + \text{``2D'' photos}\right\}$,
-            implementing feature matching via ML \href{https://arxiv.org/abs/1911.11763}{SuperGlue Network} and
-            \href{https://docs.opencv.org/3.4/d1/d89/tutorial_py_orb.html}{OpenCV ORB},
-            producing color depth-maps and interactive 3D reconstructions
-
-        \displaycvT{%
-            \item Spearheaded organization-wide scaling initiatives:
-                
-                documentation overhaul ($\bm{350}$ users/month, $\bm{750}$ sessions/month),
-                expanded test coverage (hundreds of new test cases),
-                standardized libraries achieving $\bm{70\%}$ code reduction
-
-            \item Created foundational tools adopted organization-wide:
-                factory data downloader,
-                unified audio test framework,
-                knowledge-sharing platforms
-
-            % 393,899 deleted, 0 changed, 965,545 added, 1,359,444 total lines of code.
-              \item Contributed $\bm{1.3\,\text{M}}$ lines of code across $\bm{16}$ languages to production systems
-        }
-
-    \end{itemize}
-    \displaycvT{%
-    \\
-    & \pythonlogo{}\textit{Python}
-        matplotlib, numpy, pandas, SciPy
-      \scikitlogo{}\tensorflowlogo{} Git
-    }
-    %
-% -------------------------------------------------------------------------------------------------
+	\dafromLast{12/2019}
+	\displaycvT{%
+		\\
+		& \pythonlogo{}\textit{Python}
+		matplotlib, numpy, pandas, SciPy
+		\scikitlogo{}\tensorflowlogo{} Git
+	}
+	%
+	% --------------------------------------------------------------------------------
 \end{ressection}
 
 
 
 \displaycvT{%
-  \vspace{-5pt}\centerline{$\sum$
-    \hrulefill{\normalsize{\censortt{Garmin},
-      $\bm{2}\text{y}\, \bm{6}\text{m}$}}}
+	\vspace{-5pt}\centerline{$\sum$
+		\hrulefill{\normalsize{\censortt{Garmin},
+				\textbf{2y 6m}}}}
 }
 
 \begin{ressection}
-% Garmin, Safety and Datalink
-% -------------------------------------------------------------------------------------------------
-    \dato{12/2019} &
-        \textbf{Software Engineer}
-        \hfill{}\censortt{\textit{Aviation}}
-    \\
+	% Garmin, Safety and Datalink
+	% --------------------------------------------------------------------------------
+	\dato{12/2019} &
+	\textbf{Software Engineer}
+	\hfill{}\censortt{\textit{Aviation}}
+	\\
 
-    \dafrom{7/2018}  &
-        \censortt{\textbf{Garmin} Safety \& Datalink
-        %
-        \hfill{}}%
-        %
-    \\
+	\garminlogo{}
+	& \censortt{\textbf{Garmin} Safety \& Datalink
+		%
+		\hfill{}}%
+	%
+	\\
 
-    
+	
 
-    \garminlogo{}
-    & \begin{itemize}
-        \item Led system testing achieving DO-178B aviation safety compliance for
-            \censortt{\textbf{\href{https://www.garmin.com/en-US/p/664160}{GDL-60}}} datalink receiver
+	& \begin{itemize}
+		\item Led system testing achieving DO-178B aviation safety compliance for
+		      \censortt{\textbf{\href{https://www.garmin.com/en-US/p/664160}{GDL-60}}} datalink receiver
 
-        \displaycvT{%
-            \setlength{\itemindent}{.25in}
-                \item Designed test architecture, built infrastructure, and authored comprehensive test plans
-            \setlength{\itemindent}{0in}
-        }
+		      \displaycvT{%
+		      \setlength{\itemindent}{.25in}
+		\item Designed test architecture, built infrastructure, and authored comprehensive test plans
+		      \setlength{\itemindent}{0in}
+		      }
 
-        \item Developed embedded software enabling configuration sync across dual OS environments (Garmin, Linux)
+		\item Developed embedded software enabling configuration sync across dual OS environments (Garmin,
+		  Linux)
 
-        \displaycvT{%
-            \item Led STEM outreach:
-                hovercraft engineering project (presented at \censortt{Kansas State} ACM),
-                mentored Bring Your Child To Work Day,
-                conducted facility tours
-        }
-    \end{itemize}
-    \displaycvT{
-      \\
-      & \clogo{}\pythonlogo{}
-        Git
-    }
-    %
-% -------------------------------------------------------------------------------------------------
+		      \displaycvT{%
+		\item Led STEM outreach:
+		      hovercraft engineering project (presented at \censortt{Kansas State} ACM),
+		      mentored Bring Your Child To Work Day,
+		      conducted facility tours
+		      }
+	\dafromLast{7/2018}
+	\displaycvT{
+		\\
+		& \clogo{}\pythonlogo{}
+		Git
+	}
+	%
+	% --------------------------------------------------------------------------------
 \end{ressection}
 
-\displaycvT{% -- BEGIN displaycv
+\begin{cvressection}
+	% Garmin, Interfaces
+	% --------------------------------------------------------------------------------
+	\dato{7/2018} &
+	\textbf{Software Engineering Intern}
+	\hfill{}\censortt{\textit{Aviation}}
+	\\
+
+	\garminlogo{}
+	& \censortt{\textbf{Garmin} Interfaces/Data Routing
+		\hfill{}}%
+	%
+	\\
+
+	
+
+	& \begin{itemize}
+		% Hive
+
+		\item Built validation system for aviation tool achieving
+		      \textbf{25\%} code reduction while enhancing reliability
+		      
+		\item Delivered \textbf{10+} quality-of-life enhancements for aforementioned aviation tool
+	\dafromLast{8/2017}
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
+\begin{cvressection}
+	% Garmin, Automotive OEM
+	% --------------------------------------------------------------------------------
+	\dato{8/2017} &
+	\textbf{Software Engineering Intern}
+	\hfill{}\censortt{\textit{Automotive OEM}}
+	\\
+
+	\garminlogo{}
+	& \censortt{%
+		\textbf{Garmin}
+		\hfill{}}%
+	%
+	\\
+
+	
+
+	& \begin{itemize}
+		
+		\item Improved automation suite reliability from \textbf{80\%} to \textbf{100\%} and achieved
+		      \textbf{5x} speed improvement through API optimization
+	\dafromLast{5/2017}
+	\\
+	& \cpplogo{}
+	Visual Studio
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
+\begin{cvressection}
+	% MSAT
+	% --------------------------------------------------------------------------------
+	\dato{12/2017} &
+	\textbf{Team Lead, DRI}
+	\hfill{}\censortt{\textit{Aerospace}}
+	\\
+
+	\msatlogo{}
+	& \censortt{%
+		\href{https://sites.google.com/umsystem.edu/msat/projects/mr-mrs-sat}{%
+			\textbf{Missouri S\&T Satellite Team}}
+		Stereoscopic Imaging
+		\hfill{}}%
+	%
+	\\
+
+	
+
+	& \begin{itemize}
+		\item Led \textbf{6}-person interdisciplinary team developing nanosatellite payload with
+		      real-time stereoscopic imaging and 3D reconstruction for satellite monitoring
+
+		\item Architected synchronized dual-camera system on Raspberry Pi for precise, space-based
+		  stereoscopic imaging
+
+		\item Collaborated with chief engineer to design flight software meeting aerospace standards
+
+		\item Achieved critical design review approval; satellite launch scheduled for 2026
+	\dafromLast{4/2016}
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
+\begin{cvressection}
+	% S&T, Research & Teaching Assistant
+	% --------------------------------------------------------------------------------
+	\dato{5/2017} &
+	\textbf{Research \& Teaching Assistant}
+	\hfill{}\censortt{\textit{Computer Science}}
+	\\
+
+	\missouristlogo{}
+	& \censortt{%
+		\textbf{Missouri University of Science and Technology}
+		\hfill{}}%
+	%
+	\\
+
+	
+
+	& \begin{itemize}
+		\item Built discriminative subgraph algorithm comparing execution traces from correct vs.\
+		      faulty runs to automatically pinpoint buggy code
+
+		\item Taught programming fundamentals to hundreds of students across 4x classes and labs
+		      instances of Introduction to Programming and Data Structures
+
+		\item Successfully detected plagiarism, style infractions, and bugs via self-developed automation
+		      using \href{https://theory.stanford.edu/~aiken/moss/}{Stanford's MOSS}
+	\dafromLast{8/2016}
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
+\begin{cvressection}
+	% JeffCo, Employment Services
+	% --------------------------------------------------------------------------------
+	\dato{12/2014} &
+	\textbf{Assistant}
+	\hfill{}\censortt{\textit{Employment Services}}
+	\\
+
+	\jeffcologo{}
+	& \censortt{%
+		\textbf{Jefferson College}
+		\hfill{}\href{https://www.google.com/maps/search/Jefferson College, 1000 Viking Dr, Hillsboro,
+		  MO 63050}{%
+			\textit{Hillsboro, MO}}}
+	\\
+	%
+
+	&
+	\textit{Rehired} \texttt{5/2015--8/2015}, \texttt{5/2016--8/2016} \\
+
+	
+
+	& \begin{itemize}
+		\item Created user manual adopted as standard training resource for all new assistants
+		\item Managed campus-wide student employment database and designed marketing materials
+	\dafromLast{9/2014}
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
+\begin{cvressection}
+	% Freelance, Web Developer
+	% --------------------------------------------------------------------------------
+	
+
+	\dato{8/2014} &
+	\textbf{Web Developer}
+	\\
+
+	&
+	\textbf{Freelance}
+	\hfill{}\censortt{%
+		\href{https://www.google.com/maps/search/De Soto, MO}{\textit{De Soto, MO}}
+	}
+	%
+	\\
+	
+
+	& \begin{itemize}
+		
+		\item Delivered \textbf{6} client projects including websites, UI/UX design, and data analytics
+		\item Specialized in WordPress and Bootstrap for responsive web development
+	\dafromLast{5/2014}
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
+\begin{cvressection}
+	% Missouri Valley College Computer Lab
+	% --------------------------------------------------------------------------------
+	\dato{5/2014} &
+	\textbf{Assistant}
+	\hfill{}\censortt{\textit{Computer Lab}}
+	\\
+
+	\movallogo{} & \censortt{%
+		\textbf{Missouri Valley College}
+		\hfill{}\href{https://www.google.com/maps/search/Missouri Valley College, 500 E College St,
+		  Marshall, MO 65340}{%
+			\textit{Marshall, MO}}}%
+	\\
+
+	
+
+	& \begin{itemize}
+		\item Provided technical support to students with Visual Basic, C, and C++ programming
+		  assignments and projects
+		\item Coached students in a diverse array of computer applications (Microsoft Suite,
+		  Visual Studio, etc.) and programming concepts, debugging techniques, and best
+		  practices for software development
+		\item Maintained and updated software installations across lab workstations, ensuring
+		  compatibility with coursework
+	\dafromLast{9/2013}
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
+\begin{cvressection}
+	% Villa Antonio Winery
+	% --------------------------------------------------------------------------------
+	\dato{11/2012} &
+	\textbf{Hospitality Staff}
+	\\
+
+	\villaantoniologo{} & \censortt{%
+		\textbf{Villa Antonio Winery}
+		\hfill{}\textit{Hillsboro, Missouri}}
+	\\
+	& \begin{itemize}
+		\item Assisted with dining operations: hauled dishes, cleaned facilities, and maintained service
+		  standards
+		\item Directed event parking and assisted with event setup for weddings and special occasions
+		\item Harvested grapes from vineyard and transported to production facility during summer seasons
+	\dafromLast{6/2010}
+	% --------------------------------------------------------------------------------
+\end{cvressection}
+
 
 \begin{ressection}
-% Garmin, Interfaces
-% -------------------------------------------------------------------------------------------------
-    \dato{7/2018} &
-        \textbf{Software Engineering Intern}
-        \hfill{}\censortt{\textit{Aviation}}
-    \\
+	% experience list
+	% --------------------------------------------------------------------------------
+	\displaycvT{% BEGIN displaycv
+		\googlelogo{} &
+		\textit{Software Engineer} \censortt{\textbf{Google} Beam}%
+		\dotfill{}\texttt{\phantom{0}1/2025--present} \\
+		\googlelogo{} &
+		\textit{Software Engineer} \censortt{\textbf{Google} Beam}%
+		\dotfill{}\texttt{\phantom{0}9/2023--\phantom{0}1/2025} \\
+		\googlelogo{} &
+		\textit{Software Engineer} \censortt{\textbf{Google} Central Test Engineering}%
+		\dotfill{}\texttt{12/2019--\phantom{0}9/2023} \\
 
-    \dafrom{8/2017} &
-        \censortt{\textbf{Garmin} Interfaces/Data Routing
-        \hfill{}}%
-        %
-    \\
+		
 
-    
+		\garminlogo{} &
+		\textit{Software Engineer} \censortt{\textbf{Garmin} Safety \& Datalink}%
+		\dotfill{}\texttt{\phantom{0}7/2018--12/2019} \\
+	} % END displaycv
+	\garminlogo{} &
+	\textit{Software Engineering Intern} \censortt{\textbf{Garmin} Interfaces/Data Routing}%
+	\dotfill{}\texttt{\phantom{0}8/2017--\phantom{0}6/2018} \\
+	\garminlogo{} &
+	\textit{Software Engineering Intern} \censortt{\textbf{Garmin} Automotive OEM}%
+	\dotfill{}\texttt{\phantom{0}5/2017--\phantom{0}8/2017} \\
 
-    \garminlogo{}
-    & \begin{itemize}
-        % Hive
+	\displaycvT{%
+		\missouristlogo{} &
+		\textit{Bachelor of Science} \censortt{\textbf{Missouri S\&T} Computer Science}%
+		\dotfill{}\texttt{\phantom{0}1/2015--12/2018} \\
+	} %
 
-        \item Built validation system for aviation tool achieving
-            $\bm{25\%}$ code reduction while enhancing reliability
-        
-        \item Delivered $\bm{10^+}$ quality-of-life enhancements for aforementioned aviation tool
-    \end{itemize}
-% -------------------------------------------------------------------------------------------------
+	\displaycvT{\msatlogo{} &
+	\textit{Team Lead, DRI} \censortt{\textbf{Missouri S\&T} Satellite Team}%
+	\dotfill{}\texttt{\phantom{0}4/2016--12/2017} \\}
+	\missouristlogo{} &
+	\textit{Research \& Teaching Assistant} \censortt{\textbf{Missouri S\&T} Computer Science}%
+	\dotfill{}\texttt{\phantom{0}8/2016--\phantom{0}4/2017}%
+	%
+	%
+	\displaycvT{%
+		\\
+		\missouristlogo{} &
+		\textit{Assistant} \censortt{\textbf{Missouri S\&T} Computer Lab}%
+		\dotfill{}\texttt{\phantom{0}1/2016--\phantom{0}4/2017} \\
+
+		\jeffcologo{} &
+		\textit{Assistant} \censortt{\textbf{Jefferson College} Employment Services}%
+		\dotfill{}\texttt{9/2014--12/2014}, \texttt{5/2015--8/2015},%
+		\texttt{\phantom{0}5/2016--\phantom{0}8/2016} \\
+
+		& \textit{Web Developer} \textbf{Freelance}%
+		\dotfill{}\texttt{\phantom{0}5/2014--\phantom{0}8/2014} \\
+
+		\movallogo{} &
+		\textit{Assistant} \censortt{\textbf{Missouri Valley College} Computer Lab}%
+		\dotfill{}\texttt{\phantom{0}9/2013--\phantom{0}5/2014} \\
+
+		\villaantoniologo{} &
+		\textit{Hospitality Staff} \censortt{\textbf{Villa Antonio Winery}}%
+		\dotfill{}\texttt{\phantom{0}6/2010--11/2012}%
+	} %
+	% --------------------------------------------------------------------------------
 \end{ressection}
-
-\begin{ressection}
-% Garmin, Automotive OEM
-% -------------------------------------------------------------------------------------------------
-    \dato{8/2017} &
-        \textbf{Software Engineering Intern}
-        \hfill{}\censortt{\textit{Automotive OEM}}
-    \\
-
-    \dafrom{5/2017} & \censortt{%
-        \textbf{Garmin}
-        \hfill{}}%
-        %
-    \\
-
-    
-
-    \garminlogo{}
-    & \begin{itemize}
-        
-      \item Improved automation suite reliability from $\bm{80\%}$ to $\bm{100\%}$ and achieved
-            $\bm{5^\times}$ speed improvement through API optimization
-    \end{itemize} \\
-    & \cpplogo{}
-      Visual Studio
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-\begin{ressection}
-% MSAT
-% -------------------------------------------------------------------------------------------------
-    \dato{12/2017} &
-        \textbf{Team Lead, DRI}
-        \hfill{}\censortt{\textit{Aerospace}}
-    \\
-
-    \dafrom{4/2016} & \censortt{%
-        \href{https://sites.google.com/umsystem.edu/msat/projects/mr-mrs-sat}{%
-            \textbf{Missouri S\&T Satellite Team}}
-        Stereoscopic Imaging
-        \hfill{}{%
-            \href{https://www.google.com/maps/search/Missouri University of Science and Technology, Parker Hall, 106, 300 W 13th St, Rolla, MO 65409}{%
-                \textit{Rolla, MO}}
-        }}%
-        %
-    \\
-
-    
-
-    \msatlogo{}
-    & \begin{itemize}
-        \item Led $\bm{6}$-person interdisciplinary team developing nanosatellite payload with
-            real-time stereoscopic imaging and 3D reconstruction for satellite monitoring
-
-        \item Architected synchronized dual-camera system on Raspberry Pi for precise, space-based stereoscopic imaging
-
-        \item Collaborated with chief engineer to design flight software meeting aerospace standards
-
-        \item Achieved critical design review approval; satellite launch scheduled for 2026
-    \end{itemize}
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-\begin{ressection}
-% S&T, Teaching Assistant
-% -------------------------------------------------------------------------------------------------
-    \dato{5/2017} &
-        \textbf{Teaching Assistant}
-        \hfill{}\censortt{\textit{Computer Science}}
-    \\
-
-    \dafrom{8/2016} & \censortt{%
-        \textbf{Missouri University of Science and Technology}
-        \hfill{}}%
-        %
-    \\
-
-    
-
-    \missouristlogo{}
-    & \begin{itemize}
-        \item Taught programming fundamentals to hundreds of students across 4x classes and labs instances of
-          Introduction to Programming and Data Structures
-        \item Successfully detected plagiarism, style infractions, and bugs via self-developed automation using
-          \href{https://theory.stanford.edu/~aiken/moss/}{Stanford's MOSS}
-    \end{itemize}
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-\begin{ressection}
-% JeffCo, Employment Services
-% -------------------------------------------------------------------------------------------------
-    \dato{12/2014} &
-        \textbf{Assistant}
-        \hfill{}\censortt{\textit{Employment Services}}
-    \\
-
-    \dafrom{9/2014} & \censortt{%
-        \textbf{Jefferson College}
-        \hfill{}\href{https://www.google.com/maps/search/Jefferson College, 1000 Viking Dr, Hillsboro, MO 63050}{%
-            \textit{Hillsboro, MO}}}
-    \\
-    %
-
-    \jeffcologo{} &
-    \textit{Rehired} \texttt{5/2015--8/2015}, \texttt{5/2016--8/2016} \\
-
-    
-
-    & \begin{itemize}
-        \item Created user manual adopted as standard training resource for all new assistants
-        \item Managed campus-wide student employment database and designed marketing materials
-    \end{itemize}
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-\begin{ressection}
-% Freelance, Web Developer
-% -------------------------------------------------------------------------------------------------
-    
-
-    \dato{8/2014} &
-        \textbf{Web Developer}
-    \\
-
-    \dafrom{5/2014} &
-        \textbf{Freelance}
-        \hfill{}\censortt{%
-            \href{https://www.google.com/maps/search/De Soto, MO}{\textit{De Soto, MO}}
-        }
-        %
-    \\
-    
-
-    & \begin{itemize}
-        
-        \item Delivered $\bm{6}$ client projects including websites, UI/UX design, and data analytics
-        \item Specialized in WordPress and Bootstrap for responsive web development
-    \end{itemize}
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-\begin{ressection}
-% Missouri Valley College Computer Lab
-% -------------------------------------------------------------------------------------------------
-    \dato{5/2014} &
-        \textbf{Assistant}
-        \hfill{}\censortt{\textit{Computer Lab}}
-    \\
-
-    \dafrom{9/2013} & \censortt{%
-        \textbf{Missouri Valley College}
-        \hfill{}\href{https://www.google.com/maps/search/Missouri Valley College, 500 E College St, Marshall, MO 65340}{%
-            \textit{Marshall, MO}}}
-    \\
-
-    
-
-    \movallogo{} & \begin{itemize}
-        \item Provided technical support to students with Visual Basic, C, and C++ programming assignments and projects
-        \item Coached students in a diverse array of computer applications (Microsoft Suite, Visual Studio, etc.) and programming concepts, debugging techniques, and best practices for software development
-        \item Maintained and updated software installations across lab workstations, ensuring compatibility with coursework
-    \end{itemize}
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-\begin{ressection}
-% Villa Antonio Winery
-% -------------------------------------------------------------------------------------------------
-    \dato{11/2012} &
-        \textbf{Hospitality Staff}
-    \\
-    \dafrom{6/2010}
-        & \censortt{%
-            \textbf{Villa Antonio Winery}
-            \hfill{}\textit{Hillsboro, Missouri}}
-    \\
-    \villaantoniologo{} & \begin{itemize}
-        \item Assisted with dining operations: hauled dishes, cleaned facilities, and maintained service standards
-        \item Directed event parking and assisted with event setup for weddings and special occasions
-        \item Harvested grapes from vineyard and transported to production facility during summer seasons
-    \end{itemize}
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-
-} % -- END displaycv
-
-
-\begin{ressection}
-% experience list
-% -------------------------------------------------------------------------------------------------
-\displaycvT{% BEGIN displaycv
-    \googlelogo{} &
-        \textit{Software Engineer} \censortt{\textbf{Google} Beam}%
-        \dotfill{}\texttt{\phantom{0}1/2025--present} \\
-    \googlelogo{} &
-        \textit{Software Engineer} \censortt{\textbf{Google} Beam}%
-        \dotfill{}\texttt{\phantom{0}9/2023--\phantom{0}1/2025} \\
-    \googlelogo{} &
-        \textit{Software Engineer} \censortt{\textbf{Google} Central Test Engineering}%
-        \dotfill{}\texttt{12/2019--\phantom{0}9/2023} \\
-
-    
-
-    \garminlogo{} &
-        \textit{Software Engineer} \censortt{\textbf{Garmin} Safety \& Datalink}%
-        \dotfill{}\texttt{\phantom{0}7/2018--12/2019} \\
-} % END displaycv
-    \garminlogo{} &
-        \textit{Software Engineering Intern} \censortt{\textbf{Garmin} Interfaces/Data Routing}%
-        \dotfill{}\texttt{\phantom{0}8/2017--\phantom{0}6/2018} \\
-    \garminlogo{} &
-        \textit{Software Engineering Intern} \censortt{\textbf{Garmin} Automotive OEM}%
-        \dotfill{}\texttt{\phantom{0}5/2017--\phantom{0}8/2017} \\
-
-\displaycvT{%
-    \missouristlogo{} &
-        \textit{Bachelor of Science} \censortt{\textbf{Missouri S\&T} Computer Science}%
-        \dotfill{}\texttt{\phantom{0}1/2015--12/2018} \\
-} %
-
-\msatlogo{} &
-    \textit{Team Lead, DRI} \censortt{\textbf{Missouri S\&T Satellite Team}}%
-    \dotfill{}\texttt{\phantom{0}4/2016--12/2017} \\
-\missouristlogo{} &
-    \textit{Teaching Assistant} \censortt{\textbf{Missouri S\&T} Computer Science}%
-    \dotfill{}\texttt{\phantom{0}8/2016--\phantom{0}4/2017}%
 %
-%
-\displaycvT{%
-    \\
-    \missouristlogo{} &
-        \textit{Assistant} \censortt{\textbf{Missouri S\&T} Computer Lab}%
-        \dotfill{}\texttt{\phantom{0}1/2016--\phantom{0}4/2017} \\
 
-    \jeffcologo{} &
-        \textit{Assistant} \censortt{\textbf{Jefferson College} Employment Services}%
-            \dotfill{}\texttt{9/2014--12/2014}, \texttt{5/2015--8/2015}, \texttt{\phantom{0}5/2016--\phantom{0}8/2016} \\
-
-    & \textit{Web Developer} \textbf{Freelance}%
-    \dotfill{}\texttt{\phantom{0}5/2014--\phantom{0}8/2014} \\
-
-    \movallogo{} &
-        \textit{Assistant} \censortt{\textbf{Missouri Valley College} Computer Lab}%
-        \dotfill{}\texttt{\phantom{0}9/2013--\phantom{0}5/2014} \\
-
-    \villaantoniologo{} &
-        \textit{Hospitality Staff} \censortt{\textbf{Villa Antonio Winery}}%
-        \dotfill{}\texttt{\phantom{0}6/2010--11/2012}%
-} %
-% -------------------------------------------------------------------------------------------------
+\begin{ressection}
+	% --------------------------------------------------------------------------------
+	\faGlobe{} &
+	\censortt{\href{https://starikov.co}{\textbf{starikov.co}}}
+	Independent technical writing on \href{https://starikov.co/tag/ai/}{AI},
+	\href{https://starikov.co/tag/computer-science/}{computer science}, and
+	\href{https://starikov.co/tag/mathematics/}{mathematics}.
+	\textbf{70+} posts, \textbf{14k} views/year.
+	\\
+	\faGithub{} &
+	\censortt{\href{https://github.com/IllyaStarikov/.dotfiles}{\textbf{.dotfiles}}}
+  Multi-platform, enterprise-grade development environment with 80+ plugins, E2E tests, and \textbf{10+} shell tools.
+  %
+	% --------------------------------------------------------------------------------
 \end{ressection}
 %
 \vspace{0.25em}
 %
 \section{Expertise}
-% -------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
 \begin{ressection}
-% Technology
-% -------------------------------------------------------------------------------------------------
-    \dafrom{tech}
-    & \textbf{Languages}
-        Python,
-        C++,
-        C,
-        Bash,
-        SQL,
-        LaTeX,
-        Swift,
-        C\#,
-        Lua,
-        Perl
-        \hfill{}%
-        \pythonlogo{}\cpplogo{}\clogo{}\bashlogo{}\sqllogo{}\latexlogo{}\swiftlogo{}\csharplogo{}\lualogo{}\perllogo{}%
-          \\
-        \displaycvT{%
-          & \quad{} \textit{Additional}
-              Assembly,
-              Lisp,
-              Matlab,
-              Vimscript,
-              Basic,
-              AppleScript,
-              ActionScript
-            \\
-        }%
-        %
-        %
-    & \textbf{ML/AI}
-        \href{https://scikit-learn.org/}{scikit-learn},
-        \href{https://www.tensorflow.org/}{TensorFlow},
-        \href{https://colab.sandbox.google.com/}{Colab},
-        \href{https://cloud.google.com/vertex-ai}{GCP Vertex AI}
-        \hfill{}
-        \scikitlogo{}\tensorflowlogo{}\gcplogo{}
-    \\
-    %
-    & \textbf{Tools}
-        \href{https://www.docker.com}{Docker},
-        \href{https://git-scm.com/}{Git},
-        \href{https://en.wikipedia.org/wiki/Make_(software)}{Make},
-        \href{https://en.wikipedia.org/wiki/Regular_expression}{regex},
-        \href{https://github.com/tmux/tmux/wiki}{tmux},
-        \href{https://www.vim.org/}{Vim},
-        \href{https://developer.apple.com/documentation/}{Xcode},
-        CI/CD,
-        Linux
-    \\
-    %
-    \displaycvT{%
-        & \textbf{Markup}
-          \href{https://en.wikipedia.org/wiki/CSS}{CSS},
-          \href{https://en.wikipedia.org/wiki/HTML}{HTML},
-          \href{https://www.json.org/}{JSON},
-          \href{https://en.wikipedia.org/wiki/Markdown}{Markdown},
-          \href{https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html}{reStructuredText},
-          \href{https://en.wikipedia.org/wiki/XML}{XML},
-          \href{https://yaml.org/}{YAML}
-          \\
-    }
-    %
-    
-    %
-    & \textbf{Python}
-        \href{https://cython.org}{Cython},
-        \href{https://matplotlib.org/}{matplotlib},
-        \href{https://numpy.org/}{numpy},
-        \href{https://pandas.pydata.org/}{pandas},
-        \href{https://docs.python.org/3/library/pdb.html}{pdb},
-        \href{https://github.com/pyenv/pyenv}{pyenv},
-        \href{https://scipy.org}{SciPy},
-        \href{https://www.sphinx-doc.org/en/master/}{sphinx},
-        \href{https://pypi.org/project/tox/}{tox},
-        \href{https://docs.python.org/3/library/venv.html}{venv}
-    %
-    % \displaycvT{%
-        \\
-        & \textbf{C++$\bm{17}$}
-            \href{https://github.com/abseil/abseil-cpp}{abseil},
-            \href{https://www.boost.org/}{Boost},
-            \href{https://github.com/catchorg/Catch2}{catch2},
-            \href{https://lldb.llvm.org/}{lldb},
-            \href{https://www.geeksforgeeks.org/the-c-standard-template-library-stl/}{STL},
-            \href{https://www.valgrind.org/}{valgrind}
-    % } %
-    %
-    %
-    %
-    %
-    %
-% -------------------------------------------------------------------------------------------------
+	% Technology
+	% --------------------------------------------------------------------------------
+	\dafrom{tech}
+	& \begin{tabular}[t]{@{}l@{\quad}l@{}}
+		\textbf{Languages} &
+			Python,
+			C++,
+			C,
+			Bash,
+			SQL \\
+		\displaycvT{%
+			\textit{Additional} &
+				LaTeX,
+				Swift,
+				C\#,
+				Lua,
+				Perl,
+				Assembly,
+				Lisp,
+				Matlab,
+				Vimscript,
+				Basic,
+				AppleScript,
+				ActionScript \\
+		}%
+		%
+		\textbf{ML/AI} &
+			\href{https://scikit-learn.org/}{scikit-learn},
+			\href{https://www.tensorflow.org/}{TensorFlow},
+			\href{https://colab.sandbox.google.com/}{Colab},
+			\href{https://cloud.google.com/vertex-ai}{GCP Vertex AI} \\
+		\textbf{Tools} &
+			\href{https://www.docker.com}{Docker},
+			\href{https://git-scm.com/}{Git},
+			\href{https://en.wikipedia.org/wiki/Make_(software)}{Make},
+			\href{https://en.wikipedia.org/wiki/Regular_expression}{regex},
+			\href{https://github.com/tmux/tmux/wiki}{tmux},
+			\href{https://www.vim.org/}{Vim},
+			\href{https://developer.apple.com/documentation/}{Xcode},
+			CI/CD,
+			Linux \\
+		\displaycvT{%
+			\textbf{Markup} &
+				\href{https://en.wikipedia.org/wiki/CSS}{CSS},
+				\href{https://en.wikipedia.org/wiki/HTML}{HTML},
+				\href{https://www.json.org/}{JSON},
+				\href{https://en.wikipedia.org/wiki/Markdown}{Markdown},
+				\href{https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html}{reStructuredText},
+				\href{https://en.wikipedia.org/wiki/XML}{XML},
+				\href{https://yaml.org/}{YAML} \\
+		}%
+		%
+		\textbf{Python} &
+			\href{https://cython.org}{Cython},
+			\href{https://matplotlib.org/}{matplotlib},
+			\href{https://numpy.org/}{numpy},
+			\href{https://pandas.pydata.org/}{pandas},
+			\href{https://docs.python.org/3/library/pdb.html}{pdb},
+			\href{https://github.com/pyenv/pyenv}{pyenv},
+			\href{https://scipy.org}{SciPy},
+			\href{https://www.sphinx-doc.org/en/master/}{sphinx},
+			\href{https://pypi.org/project/tox/}{tox},
+			\href{https://docs.python.org/3/library/venv.html}{venv} \\
+		\textbf{C++17} &
+			\href{https://github.com/abseil/abseil-cpp}{abseil},
+			\href{https://www.boost.org/}{Boost},
+			\href{https://github.com/catchorg/Catch2}{catch2},
+			\href{https://lldb.llvm.org/}{lldb},
+			\href{https://www.geeksforgeeks.org/the-c-standard-template-library-stl/}{STL},
+			\href{https://www.valgrind.org/}{valgrind} \\
+	\end{tabular}
+	% } %
+	%
+	%
+	%
+	%
+	%
+	% --------------------------------------------------------------------------------
 \end{ressection}
 %
 
 %
+% CV Mode: Show "impact" section with all metrics
+\displaycvT{%
 \begin{ressection}
-% Stats
-% -------------------------------------------------------------------------------------------------
-    %
-    %
-    \displaycvTF{%
-        %
-        \dafrom{stats} &
-        %
-    }{%
-        %
-        \dafrom{impact} &
-        %
-    }%
-    %
-    %
-    %
-    $\bm{8}$ \displaycvT{consumer/enterprise }products launched,
-    %
-    %
-    %
-    $\bm{15^+}$ interviews conducted,
-    %
-    %
-    %
-    $\bm{1}$ intern mentored,
-    %
-    %
-    %
-    $\bm{800^+}$ CLs submitted,
-    %
-    %
-    %
-    $\bm{300^+}$ code reviews,
-    %
-    %
-    %
-    $\bm{100^+}$ bugs fixed,
-    %
-    %
-    %
-    $\bm{9}$ managers\displaycvTF{ reported to}{,}  % Managers
-    %
-    %
-    \displaycvT{%
-        \\
-        \end{ressection}
+	% Stats / Impact
+	% --------------------------------------------------------------------------------
+	%
+	%
+	\dafrom{impact} &
+	%
+	%
+	%
+	\textbf{8} consumer/enterprise products launched,
+	%
+	%
+	%
+	\textbf{25+} interviews conducted,
+	%
+	%
+	%
+	\textbf{1} intern mentored,
+	%
+	%
+	%
+	\textbf{800+} CLs submitted,
+	%
+	%
+	%
+	\textbf{300+} code reviews,
+	%
+	%
+	%
+	\textbf{100+} bugs fixed,
+	%
+	%
+	%
+	\textbf{9} managers reported to  % Managers
+	%
+	%
+	\\
+	%
+\end{ressection}
+}% End displaycvT for impact section
+%
+%
+% Resume Mode: Show "misc" section with key metrics + awards
+\displaycvF{%
+\begin{ressection}
+	% Misc
+	% --------------------------------------------------------------------------------
+	%
+	%
+	\dafrom{misc} &
+	%
+	%
+	%
+	\textbf{8} products launched,
+	%
+	%
+	%
+	\textbf{25+} interviews conducted,
+	%
+	%
+	%
+	\textbf{1} intern mentored,
+	%
+	%
+	%
+	\textbf{8x} \censortt{Google} Peer Bonus,
+	%
+	%
+	%
+	\textbf{5x} \censortt{Google} Spot Bonus,
+	%
+	%
+	%
+	\censortt{Google} ``Thank You'' campaign recipient,
+	%
+	%
+	Summa Cum Laude, % 
+	%
+	%
+	\censortt{\href{https://www.youtube.com/watch?v=nlyv_Pwsrw4}{\textbf{1st} Place MegaMiner AI}}
+	% Close ntkT
+	%
+\end{ressection}
+}% End displaycvF for misc section
 
 % Kudos
-% -------------------------------------------------------------------------------------------------
-        \begin{ressection}
-    %
-        \dafrom{awards} &
-    }%
-    %
-    %
-    %
-    $\bm{8^\times}$ \censortt{Google} Peer Bonus,
-    %
-    %
-    %
-    $\bm{4^\times}$ \censortt{Google} Spot Bonus,
-    %
-    %
-    %
-    \censortt{Google} Recognition Award,
-    %
-    %
-    %
-    \displaycvT{%
-      \{\censortt{Garmin} new-hire, \censortt{Google Noogler} oritentation, \censortt{Google Beam semi-annual summit}\} trivia champion,
-    }%
-    %
-    %
-    %
-    \censortt{\href{https://siggame.io/}{$\bm{1^\text{st}}$ Place MegaMiner AI}},
-    %
-    %
-    Summa Cum Laude, % 
-    %
-    % \displaycv{%
-        $\bm{6^\times}$ Dean's List, % 
-    % }
-    %
-    $\bm{18^\text{th}/229}$
-    \displaycvTF{%
-      \censortt{%
-          \href{https://open.kattis.com/universities/mst.edu}{Missouri S\&T}
-          \href{https://open.kattis.com/users/starikov}{ACM Competitor}%
-      }
-    }{%
-      \censortt{%
-        \href{https://open.kattis.com/users/starikov}{S\&T programmer}
-      }%
-    }%
-    %
-    %
-    
-    %
-    %
-% -------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
+\displaycvT{% Only show awards section in CV mode
+\begin{ressection}
+	%
+	\dafrom{awards} &
+	%
+	%
+	%
+	%
+	\textbf{8x} \censortt{Google} Peer Bonus,
+	%
+	%
+	%
+	\textbf{5x} \censortt{Google} Spot Bonus,
+	%
+	%
+	%
+	\censortt{Google} ``Thank You'' campaign recipient,
+	%
+	%
+	%
+	\{\censortt{Garmin} new-hire, \censortt{Google Noogler} oritentation,
+	  \censortt{Google Beam semi-annual summit}\} trivia champion,
+	%
+	%
+	Summa Cum Laude, % 
+	%
+	%
+	%
+	\censortt{\href{https://www.youtube.com/watch?v=nlyv_Pwsrw4}{\textbf{1st} Place MegaMiner AI}},
+	%
+	%
+	\textbf{6x} Dean's List, % 
+	%
+	%
+	\textbf{18th/229}
+	\censortt{%
+		\href{https://open.kattis.com/universities/mst.edu}{Missouri S\&T}
+		\href{https://open.kattis.com/users/starikov}{ACM Competitor}%
+	}
+	%
+	%
+	% Close ntkT
+	%
 \end{ressection}
-
+}% End displaycvT for awards section
+%
+% \begin{ressection}
+% 	\dafrom{personal} &
+% 	Reading ($\bm{70^+}$ books read),
+% 	Fitness (Weightlifting, Running)
+% 	%
+% 	%
+% 	% --------------------------------------------------------------------------------
+% \end{ressection}
+%
 \vspace{0.25em}
-
+%
 \section{Education}
-% -------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
 \begin{ressection}
-% -------------------------------------------------------------------------------------------------
-    \dato{12/2018} &
-        \textbf{Bachelor of Science} Computer Science
-    \\
-    \displaycvTF{\dafrom{1/2015}}{\missouristlogo} & \censortt{%
-            \href{https://www.mst.edu}{\textbf{Missouri University of Science and Technology}}
-            %
-            \hfill{}\href{https://www.google.com/maps/search/Missouri University of Science and Technology, Parker Hall, 106, 300 W 13th St, Rolla, MO 65409}{%
-                \textit{Rolla, MO}}}
-    %
-    \\
-    %
-    \displaycvT{% BEGIN displaycv
-        \missouristlogo{}
+	% --------------------------------------------------------------------------------
+	\dato{12/2018} &
+	\textbf{Bachelor of Science} Computer Science
+	\\
+	\displaycvTF{\dafrom{1/2015}}{\missouristlogo} & \censortt{%
+		\href{https://www.mst.edu}{\textbf{Missouri University of Science and Technology}}
+		%
+		\hfill{}\href{https://www.google.com/maps/search/Missouri University of Science and Technology,
+		  Parker Hall, 106, 300 W 13th St, Rolla, MO 65409}{%
+			\textit{Rolla, MO}}}
+	%
+	\displaycvT{\\}% Line break only in CV mode
+	%
+	\displaycvT{% BEGIN displaycv
+		\missouristlogo{}
 
-        & \textbf{GPA} $\bm{3.83}/4.0$; Major GPA $\bm{3.88}/4.0$
-            
-            \hfill{}\textit{Summa Cum Laude} \\
+		& \textbf{GPA} \textbf{3.83/4.0}; Major GPA \textbf{3.88/4.0}
+		
+		\hfill{}\textit{Summa Cum Laude} \\
 
-        & \textbf{Advisers} \censortt{%
-            Dr. Jennifer Leopold,
-            \href{https://web.mst.edu/~ricardom/}{Dr. A. Ricardo Morales},
-            Dr. Simone Silvestri,
-            \href{https://sites.google.com/a/mst.edu/price/}{Professor Clayton Price}
-        }
-        %
-        \\
-        & \textbf{Associations}
-        \vspace{.5em}\begin{itemize}
-          \item \textbf{ACM} Academy of Computing Machinery%
-            \dotfill{}\texttt{\phantom{0}2/2016--5/2018}
-            \item \censortt{\textbf{MSAT} Missouri S\&T Satellite Team}%
-              \dotfill{}\texttt{12/2017--5/2018}%
-            \item \textbf{IEEE} Institute of Electrical and Electronics Engineers%
-              \dotfill{}\texttt{\phantom{0}1/2016--5/2017}%
-        \end{itemize}\\
-    } % END displaycv
-    %
-    
-    %
-    %
-    %
-    %
-    %
-    %
-% -------------------------------------------------------------------------------------------------
+		& \textbf{Advisers} \censortt{%
+			Dr. Jennifer Leopold,
+			\href{https://web.mst.edu/~ricardom/}{Dr. A. Ricardo Morales},
+			Dr. Simone Silvestri,
+			\href{https://sites.google.com/a/mst.edu/price/}{Professor Clayton Price}
+		}
+		%
+		\\
+		& \textbf{Associations}
+		\vspace{.5em}\begin{itemize}
+			\item \textbf{ACM} Academy of Computing Machinery%
+			      \dotfill{}\texttt{\phantom{0}2/2016--5/2018}
+			\item \censortt{\textbf{MSAT} Missouri S\&T Satellite Team}%
+			      \dotfill{}\texttt{12/2017--5/2018}%
+			\item \textbf{IEEE} Institute of Electrical and Electronics Engineers%
+			      \dotfill{}\texttt{\phantom{0}1/2016--5/2017}%
+		\end{itemize}\\
+	} % END displaycv
+	%
+	
 \end{ressection}
+	%
+	%
+	% --------------------------------------------------------------------------------
+	% Additional Schools (shown in CV mode only)
+	% --------------------------------------------------------------------------------
+\displaycvT{\begin{ressection}
+		% These entries appear in both CV and NTK modes
+		& Private Pilot Ground School \texttt{3/2019-5/2019} \\
+		\jeffcologo{} & \censortt{\href{https://www.jeffco.edu/}{\textbf{Jefferson College}}}
+		  \texttt{8/2014--12/2014} \textit{A+ scholarship} \\
+		\movallogo{} & \censortt{\href{https://www.moval.edu/}{\textbf{Missouri Valley College}}}
+		  \texttt{8/2013--5/2014} \textit{Track \& Field scholarship}%
+		%
+		% NTK-only: Add detailed coursework
+		%
+\end{ressection}}%
+%
+% ================================================================================
+% HIGH SCHOOL SECTIONS (CV ONLY)
+% ================================================================================
+\displaycvT{\begin{ressection}
+		% De Soto
+		% ------------------------------------------------------------------------------------
+		\dato{5/2013} &
+		High School\hfill{}\textit{Diploma}
+		\\
+		\dafrom{8/2009} & \censortt{%
+			\textbf{De Soto Senior High}
+			\hfill{}\href{https://www.google.com/maps/search/De Soto Senior High School, 815 Amvets Dr,
+			  De Soto, MO 63020}%
+			{\textit{De Soto, MO}}}
+		\\
 
-\displaycvT{% BEGIN displaycv
-
-\begin{ressection}
-% De Soto
-% -------------------------------------------------------------------------------------------------
-    \dato{5/2013} &
-        High School\hfill{}\textit{Diploma}
-    \\
-    \dafrom{8/2009} & \censortt{%
-        \textbf{De Soto Senior High}
-          \hfill{}\href{https://www.google.com/maps/search/De Soto Senior High School, 815 Amvets Dr, De Soto, MO 63020}
-          {\textit{De Soto, MO}}}
-        %
-    \\
-
-    \desotologo{}
-    & 
-    \textbf{Associations}
-        Cross-Country \censortt{%
-            (Class $\bm{3}$,
-            $\bm{2^\times}$ All-District individual [\href{https://www.athletic.net/CrossCountry/Results/Meet.aspx?Meet=43791\&show=all}{%
-                \texttt{2011}}\texttt{-}\href{https://www.athletic.net/CrossCountry/Division/List.aspx?DivID=12615}{\texttt{2012}}],
-            $\bm{1^\times}$ All-District team [\texttt{2012}],
-            $\bm{\#5}$ team state ranking [\href{https://www.trxctiming.com/MSHSAA_State_XC/2011/2011_class_3_boys_1_mile.htm}{\texttt{2012}}])},
-        Track \& Field,
-        Future Business Leaders of America (FBLA)
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-
-\begin{ressection}
+		\desotologo{} &
+		%
+		\textbf{Associations}
+		Cross-Country \censortt{(Class \textbf{3},
+			\textbf{2x} All-District individual [\href{https://www.athletic.net/CrossCountry/%
+			Results/Meet.aspx?Meet=43791\&show=all}{\texttt{2011}}\texttt{-}%
+			\href{https://www.athletic.net/CrossCountry/Division/List.aspx?DivID=12615}{\texttt{2012}}],
+			\textbf{1x} All-District team [\texttt{2012}],
+			\textbf{\#5} team state ranking [\href{https://www.trxctiming.com/MSHSAA_State_XC/2011/%
+			2011_class_3_boys_1_mile.htm}{\texttt{2012}}])},
+		Track \& Field,
+		Future Business Leaders of America (FBLA)
+		% ------------------------------------------------------------------------------------
+	\end{ressection}
+}% End displaycvT for De Soto section
+%
 % Sunrise
-% -------------------------------------------------------------------------------------------------
-    \dato{5/2009} &
-        Elementary, Middle School\hfill{}\textit{Diploma}
-    \\
+\displaycvT{\begin{ressection}
+		% ------------------------------------------------------------------------------------
+		\dato{5/2009} &
+		Elementary, Middle School\hfill{}\textit{Diploma}
+		\\
 
-    \dafrom{8/2000} &
-        \censortt{\textbf{Sunrise R-IX School District}
-          \href{https://www.google.com/maps/search/Sunrise Elementary School District, 4485 Sunrise School Rd, De Soto, MO 63020}{%
-          \hfill{}\textit{De Soto, MO}}}
-        %
-    \\
-    \sunriselogo{}
-    & \textbf{Associations}
-        Cross-Country, Basketball, Computer Club, Quiz Bowl, Chess Club, Yearbook Design \\
-    & \textbf{Awards}
-        \href{https://health.gov/our-work/nutrition-physical-activity/presidents-council/programs-awards/presidential-youth-fitness-program}{%
-            Presidential Fitness Award} [x8, 2001--2009],
-        School Speech Contest Winner
-% -------------------------------------------------------------------------------------------------
-\end{ressection}
-} % END displaycv
+		\dafrom{8/2000} &
+		\censortt{\textbf{Sunrise R-IX School District}
+			\href{https://www.google.com/maps/search/Sunrise Elementary School District, 4485 Sunrise School
+			  Rd, De Soto, MO 63020}%
+			{\hfill{}\textit{De Soto, MO}}}
+		\\
+		\sunriselogo{} &
+		\textbf{Associations}
+		Cross-Country, Basketball, Computer Club, Quiz Bowl, Chess Club, Yearbook Design \\
+		& \textbf{Awards}
+		\href{https://health.gov/our-work/nutrition-physical-activity/presidents-council/%
+		programs-awards/presidential-youth-fitness-program}{Presidential Fitness Award} [x8, 2001--2009],
+		School Speech Contest Winner
+		% ------------------------------------------------------------------------------------
+	\end{ressection}
+}% End displaycvT for Sunrise section
 %
-%
+% ================================================================================
+% END OF DOCUMENT
+% ================================================================================
 \end{document}
-
 

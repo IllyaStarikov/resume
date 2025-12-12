@@ -9,6 +9,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{lmodern}
 \usepackage{ifthen}
+\usepackage{verbatim} % For comment environment
 
 % Booleans
 \newboolean{ntk}
@@ -58,6 +59,7 @@
 
 \newcommand{\dato}[1]{\texttt{\small{\textbf{#1}}}}
 \newcommand{\dafrom}[1]{\texttt{\small{#1}}}
+\newcommand{\dafromLast}[1]{\end{itemize} \\[-1.2em] \dafrom{#1} &}
 
 \newcommand{\dadurationymd}[3]{\textit{\small{$\bm{#1}$y $\bm{#2}$m $\bm{#3}$d}}}
 
@@ -73,6 +75,22 @@
     \begin{tabular}{w{r}{1.5em}|p{17.5cm}}
 }{
     \end{tabular}
+}
+
+% Conditional environment that wraps ressection
+% Shows content only when displaycv=true
+\newenvironment{cvressection}{
+    \ifthenelse{\boolean{displaycv}}{
+        \begin{ressection}
+    }{
+        \comment
+    }
+}{
+    \ifthenelse{\boolean{displaycv}}{
+        \end{ressection}
+    }{
+        \endcomment
+    }
 }
 
 
