@@ -435,10 +435,10 @@ cv_dark_export: cv_dark
 	mv working.pdf resume/illya-starikov-cv-dark.pdf
 
 resume_export: resume
-	mkdir -p resume/src; mv working.pdf resume/src/illya-starikov-resume.pdf
+	mkdir -p resume/src; cp working.pdf resume/src/illya-starikov-resume.pdf; mv working.pdf resume/illya-starikov-resume.pdf
 
 resume_dark_export: resume_dark
-	mkdir -p resume/src; mv working.pdf resume/src/illya-starikov-resume-dark.pdf
+	mkdir -p resume/src; cp working.pdf resume/src/illya-starikov-resume-dark.pdf; mv working.pdf resume/illya-starikov-resume-dark.pdf
 
 ntk_export: ntk
 	mkdir pdf/ntk/; mv working.pdf pdf/ntk/illya-starikov-resume.pdf
