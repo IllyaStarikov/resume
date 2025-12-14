@@ -13,13 +13,13 @@ clean:
 
 # Build resume
 resume:
-	cd src && xelatex illya-starikov-resume.tex --interaction=nonstopmode || true
-	cd src && mv illya-starikov-resume.pdf ../illya-starikov-resume.pdf || true
+	xelatex src/illya-starikov-resume.tex --interaction=nonstopmode || true
+	mv illya-starikov-resume.pdf ./illya-starikov-resume.pdf 2>/dev/null || true
 
 # Build with multiple passes for references
 resume-full:
-	cd src && xelatex illya-starikov-resume.tex --interaction=nonstopmode || true
-	cd src && xelatex illya-starikov-resume.tex --interaction=nonstopmode || true
-	cd src && mv illya-starikov-resume.pdf ../illya-starikov-resume.pdf || true
+	xelatex src/illya-starikov-resume.tex --interaction=nonstopmode || true
+	xelatex src/illya-starikov-resume.tex --interaction=nonstopmode || true
+	mv illya-starikov-resume.pdf ./illya-starikov-resume.pdf 2>/dev/null || true
 
 .PHONY: all clean resume resume-full

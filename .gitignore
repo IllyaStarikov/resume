@@ -1,0 +1,14 @@
+# Build artifacts
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Assets and fonts (copied from parent repo)
+src/assets/
+src/fonts/
+
+# Claude Code
+.claude/
