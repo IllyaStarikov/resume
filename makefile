@@ -1,25 +1,40 @@
 # Simplified makefile for compiling resume in the public repo
-# Dependencies: xelatex, fontawesome, fontin fonts
+# Dependencies: xelatex, fontawesome
+#
+# Note: This compiles from the src/ directory where the standalone
+# source files are located. Output is moved to the root for convenience.
 
 SHELL := /bin/bash
 
-# Default target
-all: resume
+.PHONY: all clean resume resume_dark cv cv_dark help
 
-# Clean build artifacts
-clean:
-	rm -f src/*.aux src/*.log src/*.out src/*.fdb_latexmk src/*.fls src/*.synctex.gz
-	rm -f *.pdf
+all: resume resume_dark cv cv_dark
 
-# Build resume
+help:
+	@echo "Available targets:"
+	@echo "  make resume       - Build resume (light mode)"
+	@echo "  make resume_dark  - Build resume (dark mode)"
+	@echo "  make cv           - Build CV (light mode)"
+	@echo "  make cv_dark      - Build CV (dark mode)"
+	@echo "  make all          - Build all variants"
+	@echo "  make clean        - Remove build artifacts"
+
 resume:
-	xelatex src/illya-starikov-resume.tex --interaction=nonstopmode || true
-	mv illya-starikov-resume.pdf ./illya-starikov-resume.pdf 2>/dev/null || true
+	cd src && $(MAKE) resume
+	cp src/illya-starikov-resume.pdf ./
 
-# Build with multiple passes for references
-resume-full:
-	xelatex src/illya-starikov-resume.tex --interaction=nonstopmode || true
-	xelatex src/illya-starikov-resume.tex --interaction=nonstopmode || true
-	mv illya-starikov-resume.pdf ./illya-starikov-resume.pdf 2>/dev/null || true
+resume_dark:
+	cd src && $(MAKE) resume_dark
+	cp src/illya-starikov-resume-dark.pdf ./
 
-.PHONY: all clean resume resume-full
+cv:
+	cd src && $(MAKE) cv
+	cp src/illya-starikov-cv.pdf ./
+
+cv_dark:
+	cd src && $(MAKE) cv_dark
+	cp src/illya-starikov-cv-dark.pdf ./
+
+clean:
+	cd src && $(MAKE) clean
+	rm -f *.pdf *.aux *.log *.out

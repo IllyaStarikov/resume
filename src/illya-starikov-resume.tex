@@ -20,7 +20,7 @@
 \usepackage[big]{layaureo}
 
 % headers
-\input{src/macros.tex}
+\input{macros.tex}
 
 \setlength{\parskip}{.45em}
 
@@ -37,8 +37,8 @@
 \setboolean{displaycontact}{true}
 % \setboolean{displaycontact}{false}
 
-\setboolean{displaycolor}{true}
-% \setboolean{displaycolor}{false}
+% \setboolean{displaycolor}{true}
+\setboolean{displaycolor}{false}
 
 % \setboolean{displaycensored}{true}
 \setboolean{displaycensored}{false}
@@ -79,6 +79,7 @@
 		\faGithub{}   & \href{https://github.com/IllyaStarikov}{\censortt{\textbf{@IllyaStarikov}}}
                   $\vert$
                   \faLinkedin{} \href{https://linkedin.com/in/IllyaStarikov}{\censortt{\textbf{@IllyaStarikov}}} \\
+		\displaycvF{& \\}% blank row in resume mode for spacing
 		% ------------------------------------------------------------------------------------
 	\end{tabular}
 
@@ -134,9 +135,9 @@
 	\dato{1/2025}
 	& \textbf{Camera Team} \\
 	& \begin{itemize}
-		\item Owned camera hardware-in-the-loop test (HILT) infrastructure, enabling new tests,
+		\item Owned camera hardware-in-the-loop test infrastructure, enabling new tests,
 		      hardware, and platforms
-		      \setlength{\itemindent}{.25in} \item Eliminated \textbf{105}-day camera HILT failure
+		      \setlength{\itemindent}{.25in} \item Eliminated \textbf{105}-day camera test failure
 		      streak within \textbf{1} month of start-date, resolved \textbf{10+} blocking issues
 		      \item Collaborated with team to improve pass rate from \textbf{30\%} to \textbf{100\%},
 		      grow suite from \textbf{10} to \textbf{30+} tests
@@ -565,10 +566,7 @@
 	\displaycvT{% BEGIN displaycv
 		\googlelogo{} &
 		\textit{Software Engineer} \censortt{\textbf{Google} Beam}%
-		\dotfill{}\texttt{\phantom{0}1/2025--present} \\
-		\googlelogo{} &
-		\textit{Software Engineer} \censortt{\textbf{Google} Beam}%
-		\dotfill{}\texttt{\phantom{0}9/2023--\phantom{0}1/2025} \\
+		\dotfill{}\texttt{\phantom{0}9/2023--present} \\
 		\googlelogo{} &
 		\textit{Software Engineer} \censortt{\textbf{Google} Central Test Engineering}%
 		\dotfill{}\texttt{12/2019--\phantom{0}9/2023} \\
